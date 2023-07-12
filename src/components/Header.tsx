@@ -41,18 +41,23 @@ export default function Header() {
 	return (
 		<>
 			<Container
+				disableGutters
 				sx={{
-					width: "300px",
-					height: "100vh",
 					position: "fixed",
 					top: "0px",
 					left: { xs: headerPos, lg: "0px" },
+					bottom: "0px",
+					width: "300px",
 					bgcolor: "primary.main",
 					transition: "all 0.5s",
 					display: "flex",
 					flexDirection: "column",
 					justifyContent: "start",
 					alignItems: "center",
+					zIndex: "100",
+					paddingLeft: "15px",
+					paddingRight: "15px",
+					overflowY: "auto",
 				}}
 				component={"header"}
 			>
@@ -140,12 +145,14 @@ export default function Header() {
 
 			<Fab
 				onClick={handleHeader}
+				size="small"
 				sx={{
 					bgcolor: "primary.main",
 					position: "fixed",
 					top: "15px",
 					right: { xs: "15px", lg: "-100px" },
 					transition: "all 0.5s",
+					zIndex: "100",
 				}}
 			>
 				{menuIcon}
