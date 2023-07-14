@@ -12,10 +12,34 @@ const roboto = Roboto({
 	subsets: ["latin"],
 });
 
+declare module "@mui/material/styles" {
+	interface BreakpointOverrides {
+		lg2: true;
+	}
+}
+
 const themeOptions: ThemeOptions = {
 	typography: {
 		fontSize: 12,
 		fontFamily: roboto.style.fontFamily,
+	},
+	palette: {
+		primary: {
+			main: "#f2a900",
+		},
+		secondary: {
+			main: "#111111",
+		},
+	},
+	breakpoints: {
+		values: {
+			xs: 0,
+			sm: 600,
+			md: 900,
+			lg: 1200,
+			lg2: 1320,
+			xl: 1536,
+		},
 	},
 };
 

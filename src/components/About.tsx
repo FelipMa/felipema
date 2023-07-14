@@ -1,10 +1,6 @@
-"use client";
-
 import Image from "next/image";
-import * as React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -18,10 +14,10 @@ export default function About() {
 			id="about"
 			component={"section"}
 			disableGutters
-			maxWidth={false}
+			maxWidth={"lg2"}
 			sx={{
-				paddingX: "50px",
-				paddingY: "80px",
+				paddingX: "30px",
+				paddingY: "60px",
 			}}
 		>
 			<Typography
@@ -50,11 +46,15 @@ export default function About() {
 
 			<Grid container spacing={2}>
 				<Grid item xs={4}>
-					<Box
+					<Container
 						sx={{
 							position: "relative",
 							objectFit: "contain",
-							border: "1px solid red",
+							border: "1px solid",
+							borderColor: "primary.main",
+							paddingTop: "100%", // 1:1
+							minWidth: "300px",
+							minHeight: "300px",
 						}}
 					>
 						<Image
@@ -62,7 +62,7 @@ export default function About() {
 							alt="Picture of the author"
 							fill={true}
 						/>
-					</Box>
+					</Container>
 				</Grid>
 				<Grid item xs={8} sx={{ padding: "0px" }}>
 					<Container disableGutters sx={{ paddingRight: "0px" }}>
@@ -82,114 +82,104 @@ export default function About() {
 							elit, sed do eiusmod tempor incididunt ut labore et
 							dolore magna aliqua.
 						</Typography>
-						<Box
-							sx={{
-								display: "flex",
-								flexDirection: "row",
-							}}
-						>
-							<List
-								component={"ul"}
-								disablePadding
-								sx={{ minWidth: "300px" }}
-							>
-								<ListItem disablePadding>
-									<ListItemIcon sx={{ minWidth: "25px" }}>
-										<KeyboardArrowRightIcon />
-									</ListItemIcon>
-									<ListItemText
-										primary="Home"
-										primaryTypographyProps={{
-											variant: "h6",
-										}}
-									/>
-								</ListItem>
-								<ListItem disablePadding>
-									<ListItemIcon sx={{ minWidth: "25px" }}>
-										<KeyboardArrowRightIcon />
-									</ListItemIcon>
-									<ListItemText
-										primary="About"
-										primaryTypographyProps={{
-											variant: "h6",
-										}}
-									/>
-								</ListItem>
-								<ListItem disablePadding>
-									<ListItemIcon sx={{ minWidth: "25px" }}>
-										<KeyboardArrowRightIcon />
-									</ListItemIcon>
-									<ListItemText
-										primary="Projects"
-										primaryTypographyProps={{
-											variant: "h6",
-										}}
-									/>
-								</ListItem>
-								<ListItem disablePadding>
-									<ListItemIcon sx={{ minWidth: "25px" }}>
-										<KeyboardArrowRightIcon />
-									</ListItemIcon>
-									<ListItemText
-										primary="Contact"
-										primaryTypographyProps={{
-											variant: "h6",
-										}}
-									/>
-								</ListItem>
-							</List>
-
-							<List
-								component={"ul"}
-								disablePadding
-								sx={{ minWidth: "300px" }}
-							>
-								<ListItem disablePadding>
-									<ListItemIcon sx={{ minWidth: "25px" }}>
-										<KeyboardArrowRightIcon />
-									</ListItemIcon>
-									<ListItemText
-										primary="Home"
-										primaryTypographyProps={{
-											variant: "h6",
-										}}
-									/>
-								</ListItem>
-								<ListItem disablePadding>
-									<ListItemIcon sx={{ minWidth: "25px" }}>
-										<KeyboardArrowRightIcon />
-									</ListItemIcon>
-									<ListItemText
-										primary="About"
-										primaryTypographyProps={{
-											variant: "h6",
-										}}
-									/>
-								</ListItem>
-								<ListItem disablePadding>
-									<ListItemIcon sx={{ minWidth: "25px" }}>
-										<KeyboardArrowRightIcon />
-									</ListItemIcon>
-									<ListItemText
-										primary="Projects"
-										primaryTypographyProps={{
-											variant: "h6",
-										}}
-									/>
-								</ListItem>
-								<ListItem disablePadding>
-									<ListItemIcon sx={{ minWidth: "25px" }}>
-										<KeyboardArrowRightIcon />
-									</ListItemIcon>
-									<ListItemText
-										primary="Contact"
-										primaryTypographyProps={{
-											variant: "h6",
-										}}
-									/>
-								</ListItem>
-							</List>
-						</Box>
+						<Grid container spacing={2}>
+							<Grid item xs={6}>
+								<List component={"ul"} disablePadding>
+									<ListItem disablePadding>
+										<ListItemIcon sx={{ minWidth: "25px" }}>
+											<KeyboardArrowRightIcon />
+										</ListItemIcon>
+										<ListItemText
+											primary="Home"
+											primaryTypographyProps={{
+												variant: "h6",
+											}}
+										/>
+									</ListItem>
+									<ListItem disablePadding>
+										<ListItemIcon sx={{ minWidth: "25px" }}>
+											<KeyboardArrowRightIcon />
+										</ListItemIcon>
+										<ListItemText
+											primary="About"
+											primaryTypographyProps={{
+												variant: "h6",
+											}}
+										/>
+									</ListItem>
+									<ListItem disablePadding>
+										<ListItemIcon sx={{ minWidth: "25px" }}>
+											<KeyboardArrowRightIcon />
+										</ListItemIcon>
+										<ListItemText
+											primary="Projects"
+											primaryTypographyProps={{
+												variant: "h6",
+											}}
+										/>
+									</ListItem>
+									<ListItem disablePadding>
+										<ListItemIcon sx={{ minWidth: "25px" }}>
+											<KeyboardArrowRightIcon />
+										</ListItemIcon>
+										<ListItemText
+											primary="Contact"
+											primaryTypographyProps={{
+												variant: "h6",
+											}}
+										/>
+									</ListItem>
+								</List>
+							</Grid>
+							<Grid item xs={6}>
+								<List component={"ul"} disablePadding>
+									<ListItem disablePadding>
+										<ListItemIcon sx={{ minWidth: "25px" }}>
+											<KeyboardArrowRightIcon />
+										</ListItemIcon>
+										<ListItemText
+											primary="Home"
+											primaryTypographyProps={{
+												variant: "h6",
+											}}
+										/>
+									</ListItem>
+									<ListItem disablePadding>
+										<ListItemIcon sx={{ minWidth: "25px" }}>
+											<KeyboardArrowRightIcon />
+										</ListItemIcon>
+										<ListItemText
+											primary="About"
+											primaryTypographyProps={{
+												variant: "h6",
+											}}
+										/>
+									</ListItem>
+									<ListItem disablePadding>
+										<ListItemIcon sx={{ minWidth: "25px" }}>
+											<KeyboardArrowRightIcon />
+										</ListItemIcon>
+										<ListItemText
+											primary="Projects"
+											primaryTypographyProps={{
+												variant: "h6",
+											}}
+										/>
+									</ListItem>
+									<ListItem disablePadding>
+										<ListItemIcon sx={{ minWidth: "25px" }}>
+											<KeyboardArrowRightIcon />
+										</ListItemIcon>
+										<ListItemText
+											primary="Contact"
+											primaryTypographyProps={{
+												variant: "h6",
+											}}
+										/>
+									</ListItem>
+								</List>
+							</Grid>
+						</Grid>
 						<Typography
 							component="p"
 							variant="body1"

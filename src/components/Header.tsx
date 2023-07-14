@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
@@ -48,7 +46,7 @@ export default function Header() {
 					left: { xs: headerPos, lg: "0px" },
 					bottom: "0px",
 					width: "300px",
-					bgcolor: "primary.main",
+					bgcolor: "secondary.main",
 					transition: "all 0.5s",
 					display: "flex",
 					flexDirection: "column",
@@ -58,33 +56,37 @@ export default function Header() {
 					paddingLeft: "15px",
 					paddingRight: "15px",
 					overflowY: "auto",
+					color: "primary.main",
 				}}
 				component={"header"}
 			>
 				<Avatar
 					alt="Felipe Ma"
 					src="/images/felipema.webp"
-					sx={{ width: 120, height: 120, m: 2 }}
+					sx={{ width: 100, height: 100, m: 2 }}
 				>
 					F
 				</Avatar>
 				<Typography variant="h4">Felipe Ma</Typography>
-				<Stack direction="row" spacing={2}>
+				<Stack direction="row" spacing={2} sx={{ mt: 1 }}>
 					<IconButton
 						href="https://www.instagram.com/felipema_/"
 						target="_blank"
+						color="primary"
 					>
 						<InstagramIcon fontSize="large" />
 					</IconButton>
 					<IconButton
 						href="https://www.linkedin.com/"
 						target="_blank"
+						color="primary"
 					>
 						<LinkedInIcon fontSize="large" />
 					</IconButton>
 					<IconButton
 						href="https://github.com/FelipMa"
 						target="_blank"
+						color="primary"
 					>
 						<GitHubIcon fontSize="large" />
 					</IconButton>
@@ -98,7 +100,7 @@ export default function Header() {
 				>
 					<ListItem disablePadding>
 						<ListItemButton href="#">
-							<ListItemIcon>
+							<ListItemIcon sx={{ color: "primary.main" }}>
 								<HomeIcon fontSize="large" />
 							</ListItemIcon>
 							<ListItemText
@@ -109,7 +111,7 @@ export default function Header() {
 					</ListItem>
 					<ListItem disablePadding>
 						<ListItemButton href="#about">
-							<ListItemIcon>
+							<ListItemIcon sx={{ color: "primary.main" }}>
 								<PersonIcon fontSize="large" />
 							</ListItemIcon>
 							<ListItemText
@@ -120,7 +122,7 @@ export default function Header() {
 					</ListItem>
 					<ListItem disablePadding>
 						<ListItemButton href="#projects">
-							<ListItemIcon>
+							<ListItemIcon sx={{ color: "primary.main" }}>
 								<WebIcon fontSize="large" />
 							</ListItemIcon>
 							<ListItemText
@@ -131,7 +133,7 @@ export default function Header() {
 					</ListItem>
 					<ListItem disablePadding>
 						<ListItemButton href="#contact">
-							<ListItemIcon>
+							<ListItemIcon sx={{ color: "primary.main" }}>
 								<EmailIcon fontSize="large" />
 							</ListItemIcon>
 							<ListItemText

@@ -4,6 +4,10 @@ import Container from "@mui/material/Container";
 import Header from "@/components/Header";
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import Facts from "@/components/Facts";
+import Skills from "@/components/Skills";
+import Resume from "@/components/Resume";
+import Projects from "@/components/Projects";
 
 export default function Home() {
 	return (
@@ -17,6 +21,10 @@ export default function Home() {
 				component={"main"}
 			>
 				<About />
+				<Facts />
+				<Skills />
+				<Resume />
+				<Projects />
 			</Container>
 		</>
 	);
