@@ -14,13 +14,79 @@ import EmailIcon from "@mui/icons-material/Email";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FormControl from "@mui/material/FormControl";
 import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import * as Yup from "yup";
+import * as React from "react";
+
+const schema = Yup.object().shape({
+	name: Yup.string().required("Nome necessário"),
+	email: Yup.string().required("Email necessário").email("Email inválido"),
+	subject: Yup.string().required("Assunto necessário"),
+	message: Yup.string().required("Mensagem necessária"),
+});
 
 export default function Contact() {
 	const theme = useTheme();
-	const handleSubmit = (event: any) => {
-		console.log("foi");
-		console.log(event);
+
+	const [nameError, setNameError] = React.useState<string>("");
+	const [emailError, setEmailError] = React.useState<string>("");
+	const [subjectError, setSubjectError] = React.useState<string>("");
+	const [messageError, setMessageError] = React.useState<string>("");
+
+	const handleSubmit = async (event: any) => {
+		let name = event.target.name.value;
+		let email = event.target.email.value;
+		let subject = event.target.subject.value;
+		let message = event.target.message.value;
+
+		setNameError("");
+		setEmailError("");
+		setSubjectError("");
+		setMessageError("");
+
+		event.preventDefault();
+
+		try {
+			await schema.validate(
+				{
+					name: name,
+					email: email,
+					subject: subject,
+					message: message,
+				},
+				{ abortEarly: false }
+			);
+		} catch (error: any) {
+			error.inner.forEach((e: any) => {
+				if (e.path === "name") {
+					setNameError(e.message);
+				}
+				if (e.path === "email") {
+					setEmailError(e.message);
+				}
+				if (e.path === "subject") {
+					setSubjectError(e.message);
+				}
+				if (e.path === "message") {
+					setMessageError(e.message);
+				}
+			});
+		}
+
+		let isValid = await schema.isValid({
+			name: name,
+			email: email,
+			subject: subject,
+			message: message,
+		});
+
+		if (isValid) {
+			console.log("Valid");
+		} else {
+			console.log("Invalid");
+		}
 	};
+
 	return (
 		<Container
 			id="contact"
@@ -255,6 +321,8 @@ export default function Contact() {
 										id="name"
 										label="Name"
 										variant="outlined"
+										error={Boolean(nameError)}
+										helperText={nameError}
 									/>
 								</Grid>
 								<Grid item xs={6}>
@@ -262,6 +330,8 @@ export default function Contact() {
 										id="email"
 										label="Email"
 										variant="outlined"
+										error={Boolean(emailError)}
+										helperText={emailError}
 									/>
 								</Grid>
 							</Grid>
@@ -269,15 +339,21 @@ export default function Contact() {
 								id="subject"
 								label="Subject"
 								variant="outlined"
+								error={Boolean(subjectError)}
+								helperText={subjectError}
 							/>
 							<TextField
 								id="message"
 								label="Message"
 								variant="outlined"
 								multiline
-								rows={6}
+								rows={Boolean(messageError) ? 3 : 5}
+								error={Boolean(messageError)}
+								helperText={messageError}
 							/>
-							<button type="submit">Send Message</button>
+							<Button variant="contained" type="submit">
+								Send Message
+							</Button>
 						</FormControl>
 					</Container>
 				</Grid>
