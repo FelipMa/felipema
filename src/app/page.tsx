@@ -8,6 +8,7 @@ import Facts from "@/components/Facts";
 import Skills from "@/components/Skills";
 import Resume from "@/components/Resume";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
 	return (
@@ -25,6 +26,7 @@ export default function Home() {
 				<Skills />
 				<Resume />
 				<Projects />
+				<Contact />
 			</Container>
 		</>
 	);
