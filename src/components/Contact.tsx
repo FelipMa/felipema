@@ -17,6 +17,9 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import * as Yup from "yup";
 import * as React from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const schema = Yup.object().shape({
 	name: Yup.string().required("Nome necessário"),
@@ -81,9 +84,26 @@ export default function Contact() {
 		});
 
 		if (isValid) {
-			console.log("Valid");
+			console.log("Sending message");
+			await axios
+				.post("/api/contact", {
+					name: name,
+					email: email,
+					subject: subject,
+					message: message,
+				})
+				.then((response) => {
+					console.log(response);
+					toast.success("Mensagem enviada com sucesso!");
+				})
+				.catch((error) => {
+					console.log(error);
+					toast.error(
+						"Erro ao enviar mensagem! Tente novamente mais tarde."
+					);
+				});
 		} else {
-			console.log("Invalid");
+			console.log("Tried to send invalid message");
 		}
 	};
 
@@ -358,6 +378,7 @@ export default function Contact() {
 					</Container>
 				</Grid>
 			</Grid>
+			<ToastContainer pauseOnFocusLoss={false} pauseOnHover={false} />
 		</Container>
 	);
 }
