@@ -14,10 +14,10 @@ export default function About() {
 			id="about"
 			component={"section"}
 			disableGutters
-			maxWidth={"lg2"}
 			sx={{
 				paddingX: "30px",
 				paddingY: "60px",
+				maxWidth: { xs: "sm2", md2: "lg2" },
 			}}
 		>
 			<Typography
@@ -38,14 +38,13 @@ export default function About() {
 				About
 			</Typography>
 			<Typography component={"p"} sx={{ marginBottom: "30px" }}>
-				Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-				ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-				quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-				Quia fugiat sit in iste officiis commodi quidem hic quas.
+				I study computer engineering at the Federal University of Bahia.
+				I like to study anything related to technology, from web
+				development to hardware interaction.
 			</Typography>
 
 			<Grid container spacing={2}>
-				<Grid item xs={4}>
+				<Grid item xs={12} md2={4}>
 					<Container
 						sx={{
 							position: "relative",
@@ -53,8 +52,8 @@ export default function About() {
 							border: "1px solid",
 							borderColor: "primary.main",
 							paddingTop: "100%", // 1:1
-							minWidth: "300px",
-							minHeight: "300px",
+							minWidth: "260px",
+							minHeight: "260px",
 						}}
 					>
 						<Image
@@ -64,68 +63,78 @@ export default function About() {
 						/>
 					</Container>
 				</Grid>
-				<Grid item xs={8} sx={{ padding: "0px" }}>
+				<Grid item xs={12} md2={8} sx={{ padding: "0px" }}>
 					<Container disableGutters sx={{ paddingRight: "0px" }}>
 						<Typography
 							component="h4"
 							variant="h4"
 							sx={{ marginBottom: "8px" }}
 						>
-							Web Developer &amp;
+							Web developer &amp; low-level programming enthusiast
 						</Typography>
-						<Typography
-							component="p"
-							variant="body1"
-							sx={{ fontStyle: "italic", marginBottom: "16px" }}
-						>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.
+						<Typography variant="h6" sx={{ marginBottom: "15px" }}>
+							Some information about me:
 						</Typography>
 						<Grid container spacing={2}>
 							<Grid item xs={6}>
 								<List component={"ul"} disablePadding>
 									<ListItem disablePadding>
 										<ListItemIcon sx={{ minWidth: "25px" }}>
-											<KeyboardArrowRightIcon />
+											<KeyboardArrowRightIcon color="primary" />
 										</ListItemIcon>
 										<ListItemText
-											primary="Home"
+											primary="Birthday:"
 											primaryTypographyProps={{
 												variant: "h6",
+											}}
+											secondary="21 Mar 2003"
+											secondaryTypographyProps={{
+												variant: "h6",
+											}}
+											sx={{
+												display: "flex",
+												alignItems: "center",
+												gap: "5px",
 											}}
 										/>
 									</ListItem>
 									<ListItem disablePadding>
 										<ListItemIcon sx={{ minWidth: "25px" }}>
-											<KeyboardArrowRightIcon />
+											<KeyboardArrowRightIcon color="primary" />
 										</ListItemIcon>
 										<ListItemText
-											primary="About"
+											primary="Age:"
 											primaryTypographyProps={{
 												variant: "h6",
+											}}
+											secondary="20"
+											secondaryTypographyProps={{
+												variant: "h6",
+											}}
+											sx={{
+												display: "flex",
+												alignItems: "center",
+												gap: "5px",
 											}}
 										/>
 									</ListItem>
 									<ListItem disablePadding>
 										<ListItemIcon sx={{ minWidth: "25px" }}>
-											<KeyboardArrowRightIcon />
+											<KeyboardArrowRightIcon color="primary" />
 										</ListItemIcon>
 										<ListItemText
-											primary="Projects"
+											primary="City:"
 											primaryTypographyProps={{
 												variant: "h6",
 											}}
-										/>
-									</ListItem>
-									<ListItem disablePadding>
-										<ListItemIcon sx={{ minWidth: "25px" }}>
-											<KeyboardArrowRightIcon />
-										</ListItemIcon>
-										<ListItemText
-											primary="Contact"
-											primaryTypographyProps={{
+											secondary="Salvador, BA, Brazil"
+											secondaryTypographyProps={{
 												variant: "h6",
+											}}
+											sx={{
+												display: "flex",
+												alignItems: "center",
+												gap: "5px",
 											}}
 										/>
 									</ListItem>
@@ -135,45 +144,61 @@ export default function About() {
 								<List component={"ul"} disablePadding>
 									<ListItem disablePadding>
 										<ListItemIcon sx={{ minWidth: "25px" }}>
-											<KeyboardArrowRightIcon />
+											<KeyboardArrowRightIcon color="primary" />
 										</ListItemIcon>
 										<ListItemText
-											primary="Home"
+											primary="Degree:"
 											primaryTypographyProps={{
 												variant: "h6",
+											}}
+											secondary="(Almost) Computer Engineer"
+											secondaryTypographyProps={{
+												variant: "h6",
+											}}
+											sx={{
+												display: "flex",
+												alignItems: "center",
+												gap: "5px",
 											}}
 										/>
 									</ListItem>
 									<ListItem disablePadding>
 										<ListItemIcon sx={{ minWidth: "25px" }}>
-											<KeyboardArrowRightIcon />
+											<KeyboardArrowRightIcon color="primary" />
 										</ListItemIcon>
 										<ListItemText
-											primary="About"
+											primary="Email:"
 											primaryTypographyProps={{
 												variant: "h6",
+											}}
+											secondary="felipeapenburg@gmail.com"
+											secondaryTypographyProps={{
+												variant: "h6",
+											}}
+											sx={{
+												display: "flex",
+												alignItems: "center",
+												gap: "5px",
 											}}
 										/>
 									</ListItem>
 									<ListItem disablePadding>
 										<ListItemIcon sx={{ minWidth: "25px" }}>
-											<KeyboardArrowRightIcon />
+											<KeyboardArrowRightIcon color="primary" />
 										</ListItemIcon>
 										<ListItemText
-											primary="Projects"
+											primary="Website:"
 											primaryTypographyProps={{
 												variant: "h6",
 											}}
-										/>
-									</ListItem>
-									<ListItem disablePadding>
-										<ListItemIcon sx={{ minWidth: "25px" }}>
-											<KeyboardArrowRightIcon />
-										</ListItemIcon>
-										<ListItemText
-											primary="Contact"
-											primaryTypographyProps={{
+											secondary="felipema.com.br"
+											secondaryTypographyProps={{
 												variant: "h6",
+											}}
+											sx={{
+												display: "flex",
+												alignItems: "center",
+												gap: "5px",
 											}}
 										/>
 									</ListItem>
@@ -187,14 +212,12 @@ export default function About() {
 								paddingTop: "16px",
 							}}
 						>
-							Officiis eligendi itaque labore et dolorum mollitia
-							officiis optio vero. Quisquam sunt adipisci omnis et
-							ut. Nulla accusantium dolor incidunt officia
-							tempore. Et eius omnis. Cupiditate ut dicta maxime
-							officiis quidem quia. Sed et consectetur qui quia
-							repellendus itaque neque. Aliquid amet quidem ut
-							quaerat cupiditate. Ab et eum qui repellendus omnis
-							culpa magni laudantium dolores.
+							I'm currently focusing on web development and
+							robotics, but I'm always open to new opportunities.
+							I have made some projects for university and
+							personal projects, you can check them out on the
+							projects section. I'm also very interested in
+							low-level programming.
 						</Typography>
 					</Container>
 				</Grid>

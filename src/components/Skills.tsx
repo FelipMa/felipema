@@ -8,10 +8,10 @@ export default function Skills() {
 			id="skills"
 			component={"section"}
 			disableGutters
-			maxWidth={"lg2"}
 			sx={{
 				paddingX: "30px",
 				paddingBottom: "60px",
+				maxWidth: { xs: "sm2", md2: "lg2" },
 			}}
 		>
 			<Typography
