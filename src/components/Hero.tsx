@@ -15,7 +15,7 @@ export default function Hero() {
 				flexDirection: "column",
 				justifyContent: "center",
 				alignItems: "center",
-				background: "url(/images/hero-bg.jpg) top center",
+				background: "url(/images/hero-bg.png) top center",
 				backgroundSize: "cover",
 				width: "100%",
 				height: "100vh",

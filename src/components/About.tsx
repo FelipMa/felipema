@@ -58,9 +58,10 @@ export default function About() {
 						data-aos="fade-right"
 					>
 						<Image
-							src="/images/profile-img.jpg"
+							src="/images/felipe-ma-profile-img.jpg"
 							alt="Picture of the author"
 							fill={true}
+							sizes="300px"
 						/>
 					</Container>
 				</Grid>

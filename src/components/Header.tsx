@@ -66,7 +66,7 @@ export default function Header() {
 			>
 				<Avatar
 					alt="Felipe Ma"
-					src=""
+					src="/images/felipe-ma-profile-img.jpg"
 					sx={{ width: 100, height: 100, m: 2 }}
 				>
 					F
