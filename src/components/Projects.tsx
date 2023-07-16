@@ -14,8 +14,8 @@ export default function Projects() {
 			component={"section"}
 			disableGutters
 			sx={{
-				paddingX: "30px",
-				paddingBottom: "60px",
+				paddingX: { xs: "15px", sm: "30px" },
+				paddingY: { xs: "30px", sm: "60px" },
 				maxWidth: { xs: "sm2", md2: "lg2" },
 			}}
 		>
@@ -44,7 +44,7 @@ export default function Projects() {
 			</Typography>
 
 			<Grid container spacing={2}>
-				<Grid item xs={4}>
+				<Grid item xs={12} sm={6} sm2={4}>
 					<Container
 						component={"a"}
 						href="#Projects"
@@ -96,7 +96,7 @@ export default function Projects() {
 						</Typography>
 					</Container>
 				</Grid>
-				<Grid item xs={4}>
+				<Grid item xs={12} sm={6} sm2={4}>
 					<Container
 						component={"a"}
 						href="#Projects"
@@ -148,7 +148,7 @@ export default function Projects() {
 						</Typography>
 					</Container>
 				</Grid>
-				<Grid item xs={4}>
+				<Grid item xs={12} sm={6} sm2={4}>
 					<Container
 						component={"a"}
 						href="#Projects"
@@ -200,7 +200,7 @@ export default function Projects() {
 						</Typography>
 					</Container>
 				</Grid>
-				<Grid item xs={4}>
+				<Grid item xs={12} sm={6} sm2={4}>
 					<Container
 						component={"a"}
 						href="#Projects"
@@ -252,7 +252,7 @@ export default function Projects() {
 						</Typography>
 					</Container>
 				</Grid>
-				<Grid item xs={4}>
+				<Grid item xs={12} sm={6} sm2={4}>
 					<Container
 						component={"a"}
 						href="#Projects"
@@ -304,7 +304,7 @@ export default function Projects() {
 						</Typography>
 					</Container>
 				</Grid>
-				<Grid item xs={4}>
+				<Grid item xs={12} sm={6} sm2={4}>
 					<Container
 						component={"a"}
 						href="#Projects"

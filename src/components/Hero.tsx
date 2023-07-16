@@ -35,7 +35,7 @@ export default function Hero() {
 				},
 			}}
 		>
-			<Box sx={{ zIndex: "2" }}>
+			<Box sx={{ zIndex: "2", color: "primary.main" }}>
 				<Typography component={"h1"} variant="h2">
 					Felipe Ma
 				</Typography>

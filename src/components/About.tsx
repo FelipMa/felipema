@@ -15,8 +15,8 @@ export default function About() {
 			component={"section"}
 			disableGutters
 			sx={{
-				paddingX: "30px",
-				paddingY: "60px",
+				paddingX: { xs: "15px", sm: "30px" },
+				paddingY: { xs: "30px", sm: "60px" },
 				maxWidth: { xs: "sm2", md2: "lg2" },
 			}}
 		>
@@ -75,8 +75,8 @@ export default function About() {
 						<Typography variant="h6" sx={{ marginBottom: "15px" }}>
 							Some information about me:
 						</Typography>
-						<Grid container spacing={2}>
-							<Grid item xs={6}>
+						<Grid container spacing={0}>
+							<Grid item xs={12} sm2={5}>
 								<List component={"ul"} disablePadding>
 									<ListItem disablePadding>
 										<ListItemIcon sx={{ minWidth: "25px" }}>
@@ -95,6 +95,10 @@ export default function About() {
 												display: "flex",
 												alignItems: "center",
 												gap: "5px",
+												flexWrap: {
+													xs: "wrap",
+													sm: "nowrap",
+												},
 											}}
 										/>
 									</ListItem>
@@ -115,6 +119,10 @@ export default function About() {
 												display: "flex",
 												alignItems: "center",
 												gap: "5px",
+												flexWrap: {
+													xs: "wrap",
+													sm: "nowrap",
+												},
 											}}
 										/>
 									</ListItem>
@@ -135,12 +143,16 @@ export default function About() {
 												display: "flex",
 												alignItems: "center",
 												gap: "5px",
+												flexWrap: {
+													xs: "wrap",
+													sm: "nowrap",
+												},
 											}}
 										/>
 									</ListItem>
 								</List>
 							</Grid>
-							<Grid item xs={6}>
+							<Grid item xs={12} sm2={7}>
 								<List component={"ul"} disablePadding>
 									<ListItem disablePadding>
 										<ListItemIcon sx={{ minWidth: "25px" }}>
@@ -159,6 +171,10 @@ export default function About() {
 												display: "flex",
 												alignItems: "center",
 												gap: "5px",
+												flexWrap: {
+													xs: "wrap",
+													sm: "nowrap",
+												},
 											}}
 										/>
 									</ListItem>
@@ -179,6 +195,10 @@ export default function About() {
 												display: "flex",
 												alignItems: "center",
 												gap: "5px",
+												flexWrap: {
+													xs: "wrap",
+													sm: "nowrap",
+												},
 											}}
 										/>
 									</ListItem>
@@ -199,6 +219,10 @@ export default function About() {
 												display: "flex",
 												alignItems: "center",
 												gap: "5px",
+												flexWrap: {
+													xs: "wrap",
+													sm: "nowrap",
+												},
 											}}
 										/>
 									</ListItem>
@@ -212,12 +236,12 @@ export default function About() {
 								paddingTop: "16px",
 							}}
 						>
-							I'm currently focusing on web development and
-							robotics, but I'm always open to new opportunities.
-							I have made some projects for university and
-							personal projects, you can check them out on the
-							projects section. I'm also very interested in
-							low-level programming.
+							I'm currently focusing on web development and a bit
+							of robotics, but I'm always open to new
+							opportunities. I have made some projects for
+							university and personal projects, you can check them
+							out on the projects section. I'm also very
+							interested in low-level programming.
 						</Typography>
 					</Container>
 				</Grid>

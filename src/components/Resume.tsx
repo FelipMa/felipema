@@ -6,6 +6,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import CircleIcon from "@mui/icons-material/Circle";
+import Box from "@mui/material/Box";
 
 export default function Resume() {
 	return (
@@ -14,8 +15,8 @@ export default function Resume() {
 			component={"section"}
 			disableGutters
 			sx={{
-				paddingX: "30px",
-				paddingBottom: "60px",
+				paddingX: { xs: "15px", sm: "30px" },
+				paddingY: { xs: "30px", sm: "60px" },
 				maxWidth: { xs: "sm2", md2: "lg2" },
 			}}
 		>
@@ -44,101 +45,7 @@ export default function Resume() {
 			</Typography>
 
 			<Grid container spacing={2}>
-				<Grid item xs={6}>
-					<Typography
-						variant="h5"
-						sx={{
-							fontWeight: "700",
-							marginBottom: "15px",
-						}}
-					>
-						Summary
-					</Typography>
-					<Container
-						disableGutters
-						sx={{
-							paddingBottom: "20px",
-							paddingLeft: "20px",
-							marginTop: "-2px",
-							borderLeft: "2px solid",
-							borderColor: "primary.main",
-							position: "relative",
-							"&:before": {
-								content: "''",
-								position: "absolute",
-								width: "16px",
-								height: "16px",
-								borderRadius: "50px",
-								left: "-9px",
-								top: "0",
-								background: "#fff",
-								border: "2px solid",
-								borderColor: "primary.main",
-							},
-						}}
-					>
-						<Typography variant="h6">Felipe Ma</Typography>
-						<Typography
-							variant="body1"
-							sx={{ fontStyle: "italic" }}
-						>
-							Innovative and deadline-driven Graphic Designer with
-							3+ years of experience designing and developing
-							user-centered digital/print marketing material from
-							initial concept to final, polished deliverable.
-						</Typography>
-						<List>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-						</List>
-					</Container>
-
+				<Grid item xs={12} sm2={6}>
 					<Typography
 						variant="h5"
 						sx={{
@@ -171,15 +78,17 @@ export default function Resume() {
 							},
 						}}
 					>
-						<Typography variant="h6">Felipe Ma</Typography>
+						<Typography variant="h6">
+							Bachelor's Degree in Computer Engineering
+						</Typography>
+						<Box>
+							<Typography>2021 - Present</Typography>
+						</Box>
 						<Typography
 							variant="body1"
 							sx={{ fontStyle: "italic" }}
 						>
-							Innovative and deadline-driven Graphic Designer with
-							3+ years of experience designing and developing
-							user-centered digital/print marketing material from
-							initial concept to final, polished deliverable.
+							Federal University of Bahia, Salvador, BA, Brazil
 						</Typography>
 						<List>
 							<ListItem disablePadding>
@@ -192,39 +101,7 @@ export default function Resume() {
 									<CircleIcon sx={{ fontSize: "7px" }} />
 								</ListItemIcon>
 								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
+									primary="Cientific Initiation Scholarship - Robotics and Drone Control"
 									primaryTypographyProps={{
 										variant: "body1",
 									}}
@@ -255,69 +132,19 @@ export default function Resume() {
 							},
 						}}
 					>
-						<Typography variant="h6">Felipe Ma</Typography>
+						<Typography variant="h6">High School</Typography>
+						<Box>
+							<Typography>2018 - 2020</Typography>
+						</Box>
 						<Typography
 							variant="body1"
 							sx={{ fontStyle: "italic" }}
 						>
-							Innovative and deadline-driven Graphic Designer with
-							3+ years of experience designing and developing
-							user-centered digital/print marketing material from
-							initial concept to final, polished deliverable.
+							Colégio São Paulo, Salvador, BA, Brazil
 						</Typography>
-						<List>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-						</List>
 					</Container>
 				</Grid>
-				<Grid item xs={6}>
+				<Grid item xs={12} sm2={6}>
 					<Typography
 						variant="h5"
 						sx={{
@@ -325,7 +152,7 @@ export default function Resume() {
 							marginY: "15px",
 						}}
 					>
-						Education
+						Professional Experience
 					</Typography>
 					<Container
 						disableGutters
@@ -350,15 +177,18 @@ export default function Resume() {
 							},
 						}}
 					>
-						<Typography variant="h6">Felipe Ma</Typography>
+						<Typography variant="h6">
+							TITAN Computação Inteligente
+						</Typography>
+						<Box>
+							<Typography>2022 - Present</Typography>
+						</Box>
 						<Typography
 							variant="body1"
 							sx={{ fontStyle: "italic" }}
 						>
-							Innovative and deadline-driven Graphic Designer with
-							3+ years of experience designing and developing
-							user-centered digital/print marketing material from
-							initial concept to final, polished deliverable.
+							Junior Enterprise of Computer Engineering at the
+							Federal University of Bahia
 						</Typography>
 						<List>
 							<ListItem disablePadding>
@@ -371,7 +201,7 @@ export default function Resume() {
 									<CircleIcon sx={{ fontSize: "7px" }} />
 								</ListItemIcon>
 								<ListItemText
-									primary="Home"
+									primary="Development Director"
 									primaryTypographyProps={{
 										variant: "body1",
 									}}
@@ -387,7 +217,7 @@ export default function Resume() {
 									<CircleIcon sx={{ fontSize: "7px" }} />
 								</ListItemIcon>
 								<ListItemText
-									primary="Home"
+									primary="Experience in web development with React, Next.js, Node.js, Express.js, among others."
 									primaryTypographyProps={{
 										variant: "body1",
 									}}
@@ -403,59 +233,7 @@ export default function Resume() {
 									<CircleIcon sx={{ fontSize: "7px" }} />
 								</ListItemIcon>
 								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-						</List>
-					</Container>
-					<Container
-						disableGutters
-						sx={{
-							paddingBottom: "20px",
-							paddingLeft: "20px",
-							marginTop: "-2px",
-							borderLeft: "2px solid",
-							borderColor: "primary.main",
-							position: "relative",
-							"&:before": {
-								content: "''",
-								position: "absolute",
-								width: "16px",
-								height: "16px",
-								borderRadius: "50px",
-								left: "-9px",
-								top: "0",
-								background: "#fff",
-								border: "2px solid",
-								borderColor: "primary.main",
-							},
-						}}
-					>
-						<Typography variant="h6">Felipe Ma</Typography>
-						<Typography
-							variant="body1"
-							sx={{ fontStyle: "italic" }}
-						>
-							Innovative and deadline-driven Graphic Designer with
-							3+ years of experience designing and developing
-							user-centered digital/print marketing material from
-							initial concept to final, polished deliverable.
-						</Typography>
-						<List>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
+									primary="Experience Project Management with Scrum and Notion"
 									primaryTypographyProps={{
 										variant: "body1",
 									}}
@@ -471,107 +249,7 @@ export default function Resume() {
 									<CircleIcon sx={{ fontSize: "7px" }} />
 								</ListItemIcon>
 								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-						</List>
-					</Container>
-					<Container
-						disableGutters
-						sx={{
-							paddingBottom: "20px",
-							paddingLeft: "20px",
-							marginTop: "-2px",
-							borderLeft: "2px solid",
-							borderColor: "primary.main",
-							position: "relative",
-							"&:before": {
-								content: "''",
-								position: "absolute",
-								width: "16px",
-								height: "16px",
-								borderRadius: "50px",
-								left: "-9px",
-								top: "0",
-								background: "#fff",
-								border: "2px solid",
-								borderColor: "primary.main",
-							},
-						}}
-					>
-						<Typography variant="h6">Felipe Ma</Typography>
-						<Typography
-							variant="body1"
-							sx={{ fontStyle: "italic" }}
-						>
-							Innovative and deadline-driven Graphic Designer with
-							3+ years of experience designing and developing
-							user-centered digital/print marketing material from
-							initial concept to final, polished deliverable.
-						</Typography>
-						<List>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
-									primaryTypographyProps={{
-										variant: "body1",
-									}}
-								/>
-							</ListItem>
-							<ListItem disablePadding>
-								<ListItemIcon
-									sx={{
-										minWidth: "15px",
-										color: "text.primary",
-									}}
-								>
-									<CircleIcon sx={{ fontSize: "7px" }} />
-								</ListItemIcon>
-								<ListItemText
-									primary="Home"
+									primary="Experience in python desktop development with Pandas, Numpy, Tkinter, among others."
 									primaryTypographyProps={{
 										variant: "body1",
 									}}

@@ -113,8 +113,8 @@ export default function Contact() {
 			component={"section"}
 			disableGutters
 			sx={{
-				paddingX: "30px",
-				paddingBottom: "60px",
+				paddingX: { xs: "15px", sm: "30px" },
+				paddingY: { xs: "30px", sm: "60px" },
 				maxWidth: { xs: "sm2", md2: "lg2" },
 			}}
 		>
@@ -143,7 +143,7 @@ export default function Contact() {
 			</Typography>
 
 			<Grid container spacing={2}>
-				<Grid item xs={6}>
+				<Grid item xs={12} md2={6}>
 					<Grid container spacing={2}>
 						<Grid item xs={12}>
 							<Container
@@ -212,7 +212,7 @@ export default function Contact() {
 								</Stack>
 							</Container>
 						</Grid>
-						<Grid item xs={6}>
+						<Grid item xs={12} sm={6}>
 							<Container
 								sx={{
 									textAlign: "center",
@@ -259,7 +259,7 @@ export default function Contact() {
 								</Typography>
 							</Container>
 						</Grid>
-						<Grid item xs={6}>
+						<Grid item xs={12} sm={6}>
 							<Container
 								sx={{
 									textAlign: "center",
@@ -308,7 +308,7 @@ export default function Contact() {
 						</Grid>
 					</Grid>
 				</Grid>
-				<Grid item xs={6}>
+				<Grid item xs={12} md2={6}>
 					<Container
 						sx={{
 							textAlign: "center",

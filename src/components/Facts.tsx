@@ -12,8 +12,8 @@ export default function Facts() {
 			component={"section"}
 			disableGutters
 			sx={{
-				paddingX: "30px",
-				paddingBottom: "60px",
+				paddingX: { xs: "15px", sm: "30px" },
+				paddingY: { xs: "30px", sm: "60px" },
 				maxWidth: { xs: "sm2", md2: "lg2" },
 			}}
 		>

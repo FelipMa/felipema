@@ -22,7 +22,6 @@ export default function Home() {
 				component={"main"}
 			>
 				<About />
-				<Facts />
 				<Skills />
 				<Resume />
 				<Projects />

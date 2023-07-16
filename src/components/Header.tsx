@@ -19,8 +19,12 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import { useTheme } from "@mui/material/styles";
+import { alpha } from "@mui/material";
 
 export default function Header() {
+	const theme = useTheme();
+
 	const [headerPos, setHeaderPos] = React.useState<string>("-300px");
 	const [menuIcon, setMenuIcon] = React.useState<React.ReactNode>(
 		<MenuIcon />
@@ -68,11 +72,26 @@ export default function Header() {
 					F
 				</Avatar>
 				<Typography variant="h4">Felipe Ma</Typography>
-				<Stack direction="row" spacing={2} sx={{ mt: 1 }}>
+				<Stack direction="row" spacing={2} sx={{ mt: 2 }}>
 					<IconButton
 						href="https://www.instagram.com/felipema_/"
 						target="_blank"
 						color="primary"
+						sx={{
+							backgroundColor: alpha(
+								theme.palette.primary.main,
+								0.1
+							),
+							borderRadius: "50%",
+							width: "42px",
+							height: "42px",
+							"&:hover": {
+								backgroundColor: alpha(
+									theme.palette.primary.main,
+									0.3
+								),
+							},
+						}}
 					>
 						<InstagramIcon fontSize="large" />
 					</IconButton>
@@ -80,6 +99,21 @@ export default function Header() {
 						href="https://www.linkedin.com/"
 						target="_blank"
 						color="primary"
+						sx={{
+							backgroundColor: alpha(
+								theme.palette.primary.main,
+								0.1
+							),
+							borderRadius: "50%",
+							width: "42px",
+							height: "42px",
+							"&:hover": {
+								backgroundColor: alpha(
+									theme.palette.primary.main,
+									0.3
+								),
+							},
+						}}
 					>
 						<LinkedInIcon fontSize="large" />
 					</IconButton>
@@ -87,6 +121,21 @@ export default function Header() {
 						href="https://github.com/FelipMa"
 						target="_blank"
 						color="primary"
+						sx={{
+							backgroundColor: alpha(
+								theme.palette.primary.main,
+								0.1
+							),
+							borderRadius: "50%",
+							width: "42px",
+							height: "42px",
+							"&:hover": {
+								backgroundColor: alpha(
+									theme.palette.primary.main,
+									0.3
+								),
+							},
+						}}
 					>
 						<GitHubIcon fontSize="large" />
 					</IconButton>
@@ -94,7 +143,8 @@ export default function Header() {
 				<List
 					sx={{
 						width: "100%",
-						mt: 2,
+						mt: 3,
+						ml: 8,
 					}}
 					component={"nav"}
 				>
