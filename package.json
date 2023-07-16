@@ -30,7 +30,6 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.4",
-    "prisma": "^4.16.2"
+    "@types/aos": "^3.0.4"
   }
 }
