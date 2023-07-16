@@ -8,8 +8,19 @@ import Skills from "@/components/Skills";
 import Resume from "@/components/Resume";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import * as React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+	React.useEffect(() => {
+		AOS.init({
+			duration: 800,
+			easing: "ease-in-out",
+			once: true,
+			mirror: false,
+		});
+	}, []);
 	return (
 		<>
 			<Header />
