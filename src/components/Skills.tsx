@@ -42,7 +42,7 @@ export default function Skills() {
 			</Typography>
 
 			<Grid container spacing={{ xs: 2, sm2: 4 }}>
-				<Grid item xs={12} sm2={6}>
+				<Grid item xs={12} sm2={6} data-aos="fade-up">
 					<Box
 						sx={{
 							display: "flex",
@@ -81,7 +81,13 @@ export default function Skills() {
 					<LinearProgress variant="determinate" value={50} />
 				</Grid>
 
-				<Grid item xs={12} sm2={6}>
+				<Grid
+					item
+					xs={12}
+					sm2={6}
+					data-aos="fade-up"
+					data-aos-delay="100"
+				>
 					<Box
 						sx={{
 							display: "flex",
@@ -112,10 +118,11 @@ export default function Skills() {
 			<Typography
 				component={"p"}
 				sx={{ marginBottom: "30px", marginTop: "30px" }}
+				data-aos="fade-up"
 			>
 				Some other skills I adquired during my studies and works:
 			</Typography>
-			<Grid container spacing={{ xs: 2, sm2: 4 }}>
+			<Grid container spacing={{ xs: 2, sm2: 4 }} data-aos="fade-up">
 				<Grid item xs={12} sm2={6}>
 					<Box
 						sx={{
@@ -143,7 +150,13 @@ export default function Skills() {
 					<LinearProgress variant="determinate" value={60} />
 				</Grid>
 
-				<Grid item xs={12} sm2={6}>
+				<Grid
+					item
+					xs={12}
+					sm2={6}
+					data-aos="fade-up"
+					data-aos-delay="70"
+				>
 					<Box
 						sx={{
 							display: "flex",

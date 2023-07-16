@@ -143,7 +143,7 @@ export default function Contact() {
 			</Typography>
 
 			<Grid container spacing={2}>
-				<Grid item xs={12} md2={6}>
+				<Grid item xs={12} md2={6} data-aos="flip-down">
 					<Grid container spacing={2}>
 						<Grid item xs={12}>
 							<Container
@@ -308,7 +308,7 @@ export default function Contact() {
 						</Grid>
 					</Grid>
 				</Grid>
-				<Grid item xs={12} md2={6}>
+				<Grid item xs={12} md2={6} data-aos="flip-right">
 					<Container
 						sx={{
 							textAlign: "center",

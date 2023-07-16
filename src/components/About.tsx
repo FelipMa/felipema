@@ -55,6 +55,7 @@ export default function About() {
 							minWidth: "260px",
 							minHeight: "260px",
 						}}
+						data-aos="fade-right"
 					>
 						<Image
 							src="/images/profile-img.jpg"
@@ -64,7 +65,11 @@ export default function About() {
 					</Container>
 				</Grid>
 				<Grid item xs={12} md2={8} sx={{ padding: "0px" }}>
-					<Container disableGutters sx={{ paddingRight: "0px" }}>
+					<Container
+						disableGutters
+						sx={{ paddingRight: "0px" }}
+						data-aos="fade-up"
+					>
 						<Typography
 							component="h4"
 							variant="h4"

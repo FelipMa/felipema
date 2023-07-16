@@ -72,7 +72,7 @@ export default function Header() {
 					F
 				</Avatar>
 				<Typography variant="h4">Felipe Ma</Typography>
-				<Stack direction="row" spacing={2} sx={{ mt: 2 }}>
+				<Stack direction="row" spacing={2} sx={{ pt: 2 }}>
 					<IconButton
 						href="https://www.instagram.com/felipema_/"
 						target="_blank"
@@ -143,8 +143,8 @@ export default function Header() {
 				<List
 					sx={{
 						width: "100%",
-						mt: 3,
-						ml: 8,
+						pt: 3,
+						pl: 4,
 					}}
 					component={"nav"}
 				>

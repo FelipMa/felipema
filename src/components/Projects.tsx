@@ -44,7 +44,66 @@ export default function Projects() {
 			</Typography>
 
 			<Grid container spacing={2}>
-				<Grid item xs={12} sm={6} sm2={4}>
+				<Grid item xs={12} sm={6} sm2={4} data-aos="fade-up">
+					<Container
+						component={"a"}
+						href="#projects"
+						sx={{
+							textAlign: "center",
+							display: "flex",
+							flexDirection: "column",
+							alignItems: "center",
+							justifyContent: "center",
+							border: "1px solid",
+							borderColor: "#fff",
+							boxShadow: "0px 10px 29px 0px rgba(68,88,144,0.1)",
+							padding: "30px",
+							textDecoration: "none",
+							color: "text.primary",
+							"&:hover": {
+								border: "1px solid red",
+								borderColor: "primary.main",
+								transition: "all 0.3s ease-in-out",
+							},
+						}}
+					>
+						<Box
+							sx={{
+								backgroundColor: alpha(
+									theme.palette.primary.main,
+									0.2
+								),
+								borderRadius: "50%",
+								width: "72px",
+								height: "72px",
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
+							}}
+						>
+							<PrecisionManufacturingIcon
+								color="primary"
+								fontSize="large"
+							/>
+						</Box>
+						<Typography variant="h5" sx={{ paddingY: "9px" }}>
+							Project
+						</Typography>
+						<Typography variant="body1">
+							Voluptatum deleniti atque corrupti quos dolores et
+							quas molestias excepturi sint occaecati cupiditate
+							non provident
+						</Typography>
+					</Container>
+				</Grid>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					sm2={4}
+					data-aos="fade-up"
+					data-aos-delay="100"
+				>
 					<Container
 						component={"a"}
 						href="#Projects"
@@ -96,7 +155,14 @@ export default function Projects() {
 						</Typography>
 					</Container>
 				</Grid>
-				<Grid item xs={12} sm={6} sm2={4}>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					sm2={4}
+					data-aos="fade-up"
+					data-aos-delay="200"
+				>
 					<Container
 						component={"a"}
 						href="#Projects"
@@ -148,7 +214,7 @@ export default function Projects() {
 						</Typography>
 					</Container>
 				</Grid>
-				<Grid item xs={12} sm={6} sm2={4}>
+				<Grid item xs={12} sm={6} sm2={4} data-aos="fade-up">
 					<Container
 						component={"a"}
 						href="#Projects"
@@ -200,7 +266,14 @@ export default function Projects() {
 						</Typography>
 					</Container>
 				</Grid>
-				<Grid item xs={12} sm={6} sm2={4}>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					sm2={4}
+					data-aos="fade-up"
+					data-aos-delay="100"
+				>
 					<Container
 						component={"a"}
 						href="#Projects"
@@ -252,59 +325,14 @@ export default function Projects() {
 						</Typography>
 					</Container>
 				</Grid>
-				<Grid item xs={12} sm={6} sm2={4}>
-					<Container
-						component={"a"}
-						href="#Projects"
-						sx={{
-							textAlign: "center",
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "center",
-							justifyContent: "center",
-							border: "1px solid",
-							borderColor: "#fff",
-							boxShadow: "0px 10px 29px 0px rgba(68,88,144,0.1)",
-							padding: "30px",
-							textDecoration: "none",
-							color: "text.primary",
-							"&:hover": {
-								border: "1px solid red",
-								borderColor: "primary.main",
-								transition: "all 0.3s ease-in-out",
-							},
-						}}
-					>
-						<Box
-							sx={{
-								backgroundColor: alpha(
-									theme.palette.primary.main,
-									0.2
-								),
-								borderRadius: "50%",
-								width: "72px",
-								height: "72px",
-								display: "flex",
-								alignItems: "center",
-								justifyContent: "center",
-							}}
-						>
-							<PrecisionManufacturingIcon
-								color="primary"
-								fontSize="large"
-							/>
-						</Box>
-						<Typography variant="h5" sx={{ paddingY: "9px" }}>
-							Project
-						</Typography>
-						<Typography variant="body1">
-							Voluptatum deleniti atque corrupti quos dolores et
-							quas molestias excepturi sint occaecati cupiditate
-							non provident
-						</Typography>
-					</Container>
-				</Grid>
-				<Grid item xs={12} sm={6} sm2={4}>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					sm2={4}
+					data-aos="fade-up"
+					data-aos-delay="200"
+				>
 					<Container
 						component={"a"}
 						href="#Projects"

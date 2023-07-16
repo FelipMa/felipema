@@ -45,7 +45,7 @@ export default function Resume() {
 			</Typography>
 
 			<Grid container spacing={2}>
-				<Grid item xs={12} sm2={6}>
+				<Grid item xs={12} sm2={6} data-aos="fade-up">
 					<Typography
 						variant="h5"
 						sx={{
@@ -144,7 +144,13 @@ export default function Resume() {
 						</Typography>
 					</Container>
 				</Grid>
-				<Grid item xs={12} sm2={6}>
+				<Grid
+					item
+					xs={12}
+					sm2={6}
+					data-aos="fade-up"
+					data-aos-delay="100"
+				>
 					<Typography
 						variant="h5"
 						sx={{
