@@ -242,11 +242,11 @@ export default function About() {
 								paddingTop: "16px",
 							}}
 						>
-							I'm currently focusing on web development and a bit
-							of robotics, but I'm always open to new
+							I&apos;m currently focusing on web development and a
+							bit of robotics, but I&apos;m always open to new
 							opportunities. I have made some projects for
 							university and personal projects, you can check them
-							out on the projects section. I'm also very
+							out on the projects section. I&apos;m also very
 							interested in low-level programming.
 						</Typography>
 					</Container>

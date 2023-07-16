@@ -79,7 +79,7 @@ export default function Resume() {
 						}}
 					>
 						<Typography variant="h6">
-							Bachelor's Degree in Computer Engineering
+							Bachelor&apos;s Degree in Computer Engineering
 						</Typography>
 						<Box>
 							<Typography>2021 - Present</Typography>
