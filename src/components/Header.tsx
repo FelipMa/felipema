@@ -21,6 +21,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { useTheme } from "@mui/material/styles";
 import { alpha } from "@mui/material";
+import Box from "@mui/material/Box";
 
 export default function Header() {
 	const theme = useTheme();
@@ -59,7 +60,6 @@ export default function Header() {
 					zIndex: "100",
 					paddingLeft: "15px",
 					paddingRight: "15px",
-					overflowY: "auto",
 					color: "primary.main",
 				}}
 				component={"header"}
@@ -193,6 +193,18 @@ export default function Header() {
 						</ListItemButton>
 					</ListItem>
 				</List>
+				<Box
+					sx={{
+						flexGrow: "1",
+						display: "flex",
+						flexDirection: "column",
+						justifyContent: "flex-end",
+					}}
+				>
+					<Typography sx={{ textAlign: "center", pb: 2 }}>
+						&copy; Copyright <b>Felipe Ma</b> - 2023
+					</Typography>
+				</Box>
 			</Container>
 
 			<Fab
