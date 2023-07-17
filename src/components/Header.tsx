@@ -143,14 +143,22 @@ export default function Header() {
 				<List
 					sx={{
 						width: "100%",
-						pt: 3,
-						pl: 4,
+						pt: 4,
+						display: "flex",
+						flexDirection: "column",
+						gap: "10px",
 					}}
 					component={"nav"}
 				>
 					<ListItem disablePadding>
 						<ListItemButton href="#">
-							<ListItemIcon sx={{ color: "primary.main" }}>
+							<ListItemIcon
+								sx={{
+									color: "primary.main",
+									minWidth: "40px",
+									ml: 8,
+								}}
+							>
 								<HomeIcon fontSize="large" />
 							</ListItemIcon>
 							<ListItemText
@@ -161,7 +169,13 @@ export default function Header() {
 					</ListItem>
 					<ListItem disablePadding>
 						<ListItemButton href="#about">
-							<ListItemIcon sx={{ color: "primary.main" }}>
+							<ListItemIcon
+								sx={{
+									color: "primary.main",
+									minWidth: "40px",
+									ml: 8,
+								}}
+							>
 								<PersonIcon fontSize="large" />
 							</ListItemIcon>
 							<ListItemText
@@ -172,7 +186,13 @@ export default function Header() {
 					</ListItem>
 					<ListItem disablePadding>
 						<ListItemButton href="#projects">
-							<ListItemIcon sx={{ color: "primary.main" }}>
+							<ListItemIcon
+								sx={{
+									color: "primary.main",
+									minWidth: "40px",
+									ml: 8,
+								}}
+							>
 								<WebIcon fontSize="large" />
 							</ListItemIcon>
 							<ListItemText
@@ -183,7 +203,13 @@ export default function Header() {
 					</ListItem>
 					<ListItem disablePadding>
 						<ListItemButton href="#contact">
-							<ListItemIcon sx={{ color: "primary.main" }}>
+							<ListItemIcon
+								sx={{
+									color: "primary.main",
+									minWidth: "40px",
+									ml: 8,
+								}}
+							>
 								<EmailIcon fontSize="large" />
 							</ListItemIcon>
 							<ListItemText

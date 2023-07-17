@@ -14,6 +14,7 @@ const roboto = Roboto({
 
 declare module "@mui/material/styles" {
 	interface BreakpointOverrides {
+		ticker: true;
 		sm2: true;
 		md2: true;
 		lg2: true;
@@ -36,6 +37,7 @@ const themeOptions: ThemeOptions = {
 	breakpoints: {
 		values: {
 			xs: 0,
+			ticker: 500,
 			sm: 600,
 			sm2: 720,
 			md: 900,

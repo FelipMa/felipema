@@ -10,7 +10,7 @@ export default function Projects() {
 	const theme = useTheme();
 	return (
 		<Container
-			id="Projects"
+			id="projects"
 			component={"section"}
 			disableGutters
 			sx={{
@@ -106,7 +106,7 @@ export default function Projects() {
 				>
 					<Container
 						component={"a"}
-						href="#Projects"
+						href="#projects"
 						sx={{
 							textAlign: "center",
 							display: "flex",
@@ -165,7 +165,7 @@ export default function Projects() {
 				>
 					<Container
 						component={"a"}
-						href="#Projects"
+						href="#projects"
 						sx={{
 							textAlign: "center",
 							display: "flex",
@@ -217,7 +217,7 @@ export default function Projects() {
 				<Grid item xs={12} sm={6} sm2={4} data-aos="fade-up">
 					<Container
 						component={"a"}
-						href="#Projects"
+						href="#projects"
 						sx={{
 							textAlign: "center",
 							display: "flex",
@@ -276,7 +276,7 @@ export default function Projects() {
 				>
 					<Container
 						component={"a"}
-						href="#Projects"
+						href="#projects"
 						sx={{
 							textAlign: "center",
 							display: "flex",
@@ -335,7 +335,7 @@ export default function Projects() {
 				>
 					<Container
 						component={"a"}
-						href="#Projects"
+						href="#projects"
 						sx={{
 							textAlign: "center",
 							display: "flex",
