@@ -13,30 +13,30 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
-	React.useEffect(() => {
-		AOS.init({
-			duration: 800,
-			easing: "ease-in-out",
-			once: true,
-			mirror: false,
-		});
-	}, []);
-	return (
-		<>
-			<Header />
-			<Hero />
-			<Container
-				disableGutters
-				sx={{ paddingLeft: { xs: "0px", lg: "300px" }, margin: "0px" }}
-				maxWidth={false}
-				component={"main"}
-			>
-				<About />
-				<Skills />
-				<Resume />
-				<Projects />
-				<Contact />
-			</Container>
-		</>
-	);
+  React.useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
+  return (
+    <>
+      <Header />
+      <Hero />
+      <Container
+        disableGutters
+        sx={{ paddingLeft: { xs: "0px", lg: "300px" }, margin: "0px" }}
+        maxWidth={false}
+        component={"main"}
+      >
+        <About />
+        <Skills />
+        <Resume />
+        <Projects />
+        <Contact />
+      </Container>
+    </>
+  );
 }
