@@ -213,9 +213,9 @@ export default function About() {
               </Typography>
 
               <Typography component="p" variant="body1">
-                Currently I'm development director at TITAN , Junior Enterprise
-                of Computer Engineering at UFBA. We develop custom software for
-                clients, mainly in web development.
+                Currently I&apos;m development director at TITAN , Junior
+                Enterprise of Computer Engineering at UFBA. We develop custom
+                software for clients, mainly in web development.
               </Typography>
             </Box>
           </Container>
