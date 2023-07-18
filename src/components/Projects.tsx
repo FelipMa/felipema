@@ -5,6 +5,7 @@ import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturi
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import { alpha } from "@mui/material";
+import Button from "@mui/material/Button";
 
 export default function Projects() {
 	const theme = useTheme();
@@ -37,17 +38,12 @@ export default function Projects() {
 				Projects
 			</Typography>
 			<Typography component={"p"} sx={{ marginBottom: "30px" }}>
-				Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-				ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-				quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-				Quia fugiat sit in iste officiis commodi quidem hic quas.
+				Some cool projects I've worked on
 			</Typography>
 
 			<Grid container spacing={2}>
 				<Grid item xs={12} sm={6} sm2={4} data-aos="fade-up">
 					<Container
-						component={"a"}
-						href="#projects"
 						sx={{
 							textAlign: "center",
 							display: "flex",
@@ -65,6 +61,7 @@ export default function Projects() {
 								borderColor: "primary.main",
 								transition: "all 0.3s ease-in-out",
 							},
+							gap: "10px",
 						}}
 					>
 						<Box
@@ -86,14 +83,13 @@ export default function Projects() {
 								fontSize="large"
 							/>
 						</Box>
-						<Typography variant="h5" sx={{ paddingY: "9px" }}>
-							Project
-						</Typography>
+						<Typography variant="h5">felipema.com.br</Typography>
 						<Typography variant="body1">
-							Voluptatum deleniti atque corrupti quos dolores et
-							quas molestias excepturi sint occaecati cupiditate
-							non provident
+							This site was built with Next.js and Material UI
 						</Typography>
+						<Button variant="contained">
+							View the source code
+						</Button>
 					</Container>
 				</Grid>
 				<Grid

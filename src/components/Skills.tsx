@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
+import Rating from "@mui/material/Rating";
 
 export default function Skills() {
 	return (
@@ -41,8 +42,8 @@ export default function Skills() {
 				System), by developing some projects in the university.
 			</Typography>
 
-			<Grid container spacing={{ xs: 2, sm2: 4 }}>
-				<Grid item xs={12} sm2={6} data-aos="fade-up">
+			<Grid container spacing={{ xs: 2, sm2: 2 }}>
+				<Grid item xs={12} sm2={4} data-aos="fade-up">
 					<Box
 						sx={{
 							display: "flex",
@@ -50,44 +51,40 @@ export default function Skills() {
 						}}
 					>
 						<Typography>Javascript/Typescript</Typography>
-						<Typography>90%</Typography>
+						<Typography>Advanced</Typography>
 					</Box>
 					<LinearProgress variant="determinate" value={90} />
+				</Grid>
 
+				<Grid item xs={12} sm2={4} data-aos="fade-up">
 					<Box
 						sx={{
 							display: "flex",
 							justifyContent: "space-between",
-							paddingTop: "13px",
 						}}
 					>
 						<Typography>Python</Typography>
-						<Typography>60%</Typography>
+						<Typography>Good</Typography>
 					</Box>
 					<LinearProgress variant="determinate" value={60} />
+				</Grid>
 
+				<Grid item xs={12} sm2={4} data-aos="fade-up">
 					<Box
 						sx={{
 							display: "flex",
 							justifyContent: "space-between",
-							paddingTop: "13px",
 						}}
 					>
 						<Typography>
 							ROS/ROS2 (Robot Operating System)
 						</Typography>
-						<Typography>50%</Typography>
+						<Typography>Good</Typography>
 					</Box>
 					<LinearProgress variant="determinate" value={50} />
 				</Grid>
 
-				<Grid
-					item
-					xs={12}
-					sm2={6}
-					data-aos="fade-up"
-					data-aos-delay="100"
-				>
+				<Grid item xs={12} sm2={4} data-aos="fade-up">
 					<Box
 						sx={{
 							display: "flex",
@@ -97,19 +94,20 @@ export default function Skills() {
 						<Typography>
 							Assembly and C for microcontrollers
 						</Typography>
-						<Typography>40%</Typography>
+						<Typography>Avarage</Typography>
 					</Box>
 					<LinearProgress variant="determinate" value={40} />
+				</Grid>
 
+				<Grid item xs={12} sm2={4} data-aos="fade-up">
 					<Box
 						sx={{
 							display: "flex",
 							justifyContent: "space-between",
-							paddingTop: "13px",
 						}}
 					>
 						<Typography>Java</Typography>
-						<Typography>20%</Typography>
+						<Typography>Just a few</Typography>
 					</Box>
 					<LinearProgress variant="determinate" value={20} />
 				</Grid>
@@ -122,8 +120,8 @@ export default function Skills() {
 			>
 				Some other skills I adquired during my studies and works:
 			</Typography>
-			<Grid container spacing={{ xs: 2, sm2: 4 }} data-aos="fade-up">
-				<Grid item xs={12} sm2={6}>
+			<Grid container spacing={{ xs: 2, sm2: 2 }} data-aos="fade-up">
+				<Grid item xs={12} sm2={4}>
 					<Box
 						sx={{
 							display: "flex",
@@ -131,32 +129,25 @@ export default function Skills() {
 						}}
 					>
 						<Typography>Git/Github</Typography>
-						<Typography>95%</Typography>
+						<Typography>Advanced</Typography>
 					</Box>
-					<LinearProgress variant="determinate" value={65} />
+					<LinearProgress variant="determinate" value={95} />
+				</Grid>
 
+				<Grid item xs={12} sm2={4} data-aos="fade-up">
 					<Box
 						sx={{
 							display: "flex",
 							justifyContent: "space-between",
-							paddingTop: "13px",
 						}}
 					>
-						<Typography>
-							AWS and other cloud computing platforms
-						</Typography>
-						<Typography>60%</Typography>
+						<Typography>AWS and similar</Typography>
+						<Typography>Used in some projects</Typography>
 					</Box>
 					<LinearProgress variant="determinate" value={60} />
 				</Grid>
 
-				<Grid
-					item
-					xs={12}
-					sm2={6}
-					data-aos="fade-up"
-					data-aos-delay="70"
-				>
+				<Grid item xs={12} sm2={4} data-aos="fade-up">
 					<Box
 						sx={{
 							display: "flex",
@@ -164,19 +155,20 @@ export default function Skills() {
 						}}
 					>
 						<Typography>Product Management</Typography>
-						<Typography>55%</Typography>
+						<Typography>(A Bit) Experient</Typography>
 					</Box>
 					<LinearProgress variant="determinate" value={55} />
+				</Grid>
 
+				<Grid item xs={12} sm2={4} data-aos="fade-up">
 					<Box
 						sx={{
 							display: "flex",
 							justifyContent: "space-between",
-							paddingTop: "13px",
 						}}
 					>
 						<Typography>English</Typography>
-						<Typography>90%</Typography>
+						<Typography>Very Good</Typography>
 					</Box>
 					<LinearProgress variant="determinate" value={90} />
 				</Grid>
