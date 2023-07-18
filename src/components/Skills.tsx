@@ -106,7 +106,7 @@ export default function Skills() {
           <LinearProgress variant="determinate" value={20} />
         </Grid>
 
-        <Grid item xs={12} sm2={4}>
+        <Grid item xs={12} sm2={4} data-aos="fade-up">
           <Box
             sx={{
               display: "flex",
