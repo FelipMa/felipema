@@ -38,7 +38,7 @@ export default function Projects() {
 				Projects
 			</Typography>
 			<Typography component={"p"} sx={{ marginBottom: "30px" }}>
-				Some cool projects I've worked on
+				Some cool projects I&apos;ve worked on
 			</Typography>
 
 			<Grid container spacing={2}>
