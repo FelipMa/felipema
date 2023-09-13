@@ -40,27 +40,6 @@ export default function About() {
       </Typography>
 
       <Grid container spacing={2}>
-        {/*<Grid item xs={12} md2={4}>
-          <Container
-            sx={{
-              position: "relative",
-              objectFit: "contain",
-              border: "1px solid",
-              borderColor: "primary.main",
-              paddingTop: "100%", // 1:1
-              minWidth: "260px",
-              minHeight: "260px",
-            }}
-            data-aos="fade-right"
-          >
-            <Image
-              src="/images/felipe-ma-profile-img.jpg"
-              alt="Picture of the author"
-              fill={true}
-              sizes="300px"
-            />
-        </Container>
-        </Grid>*/}
         <Grid item xs={12} md2={8} sx={{ padding: "0px" }}>
           <Container
             disableGutters

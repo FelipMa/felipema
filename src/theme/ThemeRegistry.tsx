@@ -39,7 +39,6 @@ const themeOptions: ThemeOptions = {
     },
     background: {
       default: "#111111",
-      paper: "#111111",
     },
   },
   breakpoints: {

@@ -16,14 +16,11 @@ export default function Hero() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        height: "100vh",
         /*background: "url(/images/hero-bg.gif)",
         backgroundPosition: "center",
         backgroundSize: "cover",*/
-        backgroundColor: "secondary.main",
-        height: "100vh",
-        aspectRatio: "16/9",
-        backgroundAttachment: { xs: "scroll", lg: "fixed" },
-        margin: "0px",
+        /*backgroundAttachment: { xs: "scroll", lg: "fixed" },*/
         /*"&:before": {
           content: "''",
           position: "absolute",
@@ -36,10 +33,10 @@ export default function Hero() {
         },*/
       }}
     >
-      <Container
+      <Box
         maxWidth="ticker"
         sx={{
-          zIndex: "2",
+          /*zIndex: "2",*/
           color: "primary.main",
         }}
       >
@@ -61,7 +58,7 @@ export default function Hero() {
           <Typography variant="h5">&nbsp;Python |</Typography>
           <Typography variant="h5">&nbsp;ROS &amp; ROS2 |</Typography>
         </Marquee>
-      </Container>
+      </Box>
     </Container>
   );
 }
