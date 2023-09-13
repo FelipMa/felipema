@@ -40,7 +40,7 @@ export default function About() {
       </Typography>
 
       <Grid container spacing={2}>
-        <Grid item xs={12} md2={4}>
+        {/*<Grid item xs={12} md2={4}>
           <Container
             sx={{
               position: "relative",
@@ -59,8 +59,8 @@ export default function About() {
               fill={true}
               sizes="300px"
             />
-          </Container>
-        </Grid>
+        </Container>
+        </Grid>*/}
         <Grid item xs={12} md2={8} sx={{ padding: "0px" }}>
           <Container
             disableGutters

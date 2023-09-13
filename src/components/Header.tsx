@@ -62,14 +62,21 @@ export default function Header() {
         }}
         component={"header"}
       >
-        <Avatar
+        {/*<Avatar
           alt="Felipe Ma"
           src="/images/felipe-ma-profile-img.jpg"
           sx={{ width: 100, height: 100, m: 2 }}
         >
           F
-        </Avatar>
-        <Typography variant="h4">Felipe Ma</Typography>
+        </Avatar>*/}
+        <Typography
+          variant="h4"
+          sx={{
+            paddingTop: "180px",
+          }}
+        >
+          Felipe Ma
+        </Typography>
         <Stack direction="row" spacing={2} sx={{ pt: 2 }}>
           <IconButton
             href="https://www.instagram.com/felipema_/"

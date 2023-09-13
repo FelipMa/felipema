@@ -16,15 +16,15 @@ export default function Hero() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        background: "url(/images/hero-bg.gif)",
+        /*background: "url(/images/hero-bg.gif)",
         backgroundPosition: "center",
-        backgroundSize: "cover",
-        /*backgroundColor: "secondary.main",*/
+        backgroundSize: "cover",*/
+        backgroundColor: "secondary.main",
         height: "100vh",
         aspectRatio: "16/9",
         backgroundAttachment: { xs: "scroll", lg: "fixed" },
         margin: "0px",
-        "&:before": {
+        /*"&:before": {
           content: "''",
           position: "absolute",
           top: "0",
@@ -33,7 +33,7 @@ export default function Hero() {
           right: "0",
           background: "rgba(0,0,0,0.4)",
           zIndex: 1,
-        },
+        },*/
       }}
     >
       <Container
