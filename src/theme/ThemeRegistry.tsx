@@ -27,11 +27,19 @@ const themeOptions: ThemeOptions = {
     fontFamily: roboto.style.fontFamily,
   },
   palette: {
+    mode: "dark",
     primary: {
       main: "#f2a900",
     },
     secondary: {
       main: "#111111",
+    },
+    text: {
+      primary: "#fff",
+    },
+    background: {
+      default: "#111111",
+      paper: "#111111",
     },
   },
   breakpoints: {
