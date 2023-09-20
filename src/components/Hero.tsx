@@ -7,36 +7,22 @@ import Marquee from "react-fast-marquee";
 export default function Hero() {
   return (
     <Container
+      id="home"
       disableGutters
-      id="hero"
       component={"section"}
       maxWidth={false}
       sx={{
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        /*background: "url(/images/hero-bg.gif)",
-        backgroundPosition: "center",
-        backgroundSize: "cover",*/
-        /*backgroundAttachment: { xs: "scroll", lg: "fixed" },*/
-        /*"&:before": {
-          content: "''",
-          position: "absolute",
-          top: "0",
-          bottom: "0",
-          left: "0",
-          right: "0",
-          background: "rgba(0,0,0,0.4)",
-          zIndex: 1,
-        },*/
+        paddingX: { xs: "15px", sm: "30px" },
+        paddingTop: { xs: "40px", sm: "80px" },
+        maxWidth: { xs: "sm2", md2: "lg2" },
       }}
     >
       <Box
         maxWidth="ticker"
         sx={{
-          /*zIndex: "2",*/
           color: "primary.main",
         }}
       >

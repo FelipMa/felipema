@@ -20,7 +20,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { useTheme } from "@mui/material/styles";
-import { alpha } from "@mui/material";
+import { Button, alpha } from "@mui/material";
 import Box from "@mui/material/Box";
 
 export default function Header() {
@@ -39,6 +39,47 @@ export default function Header() {
     }
   };
 
+  const socials = [
+    {
+      name: "Instagram",
+      link: "https://www.instagram.com/felipema_/",
+      icon: <InstagramIcon fontSize="large" />,
+    },
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/",
+      icon: <LinkedInIcon fontSize="large" />,
+    },
+    {
+      name: "Github",
+      link: "https://github.com/FelipMa",
+      icon: <GitHubIcon fontSize="large" />,
+    },
+  ];
+
+  const sections = [
+    {
+      name: "Home",
+      link: "#home",
+    },
+    {
+      name: "About",
+      link: "#about",
+    },
+    {
+      name: "Experience",
+      link: "#experience",
+    },
+    {
+      name: "Projects",
+      link: "#projects",
+    },
+    {
+      name: "Contact",
+      link: "#contact",
+    },
+  ];
+
   return (
     <>
       <Container
@@ -49,11 +90,11 @@ export default function Header() {
           left: { xs: headerPos, lg: "0px" },
           bottom: "0px",
           width: "300px",
-          bgcolor: "secondary.main",
+          backgroundColor: "background.default",
           transition: "all 0.5s",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "start",
+          justifyContent: "center",
           alignItems: "center",
           zIndex: "100",
           paddingLeft: "15px",
@@ -62,153 +103,56 @@ export default function Header() {
         }}
         component={"header"}
       >
-        {/*<Avatar
-          alt="Felipe Ma"
-          src="/images/felipe-ma-profile-img.jpg"
-          sx={{ width: 100, height: 100, m: 2 }}
-        >
-          F
-        </Avatar>*/}
-        <Typography
-          variant="h4"
-          sx={{
-            paddingTop: "180px",
-          }}
-        >
-          Felipe Ma
-        </Typography>
-        <Stack direction="row" spacing={2} sx={{ pt: 2 }}>
-          <IconButton
-            href="https://www.instagram.com/felipema_/"
-            target="_blank"
-            color="primary"
-            sx={{
-              backgroundColor: alpha(theme.palette.primary.main, 0.1),
-              borderRadius: "50%",
-              width: "42px",
-              height: "42px",
-              "&:hover": {
-                backgroundColor: alpha(theme.palette.primary.main, 0.3),
-              },
-            }}
-          >
-            <InstagramIcon fontSize="large" />
-          </IconButton>
-          <IconButton
-            href="https://www.linkedin.com/"
-            target="_blank"
-            color="primary"
-            sx={{
-              backgroundColor: alpha(theme.palette.primary.main, 0.1),
-              borderRadius: "50%",
-              width: "42px",
-              height: "42px",
-              "&:hover": {
-                backgroundColor: alpha(theme.palette.primary.main, 0.3),
-              },
-            }}
-          >
-            <LinkedInIcon fontSize="large" />
-          </IconButton>
-          <IconButton
-            href="https://github.com/FelipMa"
-            target="_blank"
-            color="primary"
-            sx={{
-              backgroundColor: alpha(theme.palette.primary.main, 0.1),
-              borderRadius: "50%",
-              width: "42px",
-              height: "42px",
-              "&:hover": {
-                backgroundColor: alpha(theme.palette.primary.main, 0.3),
-              },
-            }}
-          >
-            <GitHubIcon fontSize="large" />
-          </IconButton>
-        </Stack>
-        <List
-          sx={{
-            width: "100%",
-            pt: 4,
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-          component={"nav"}
-        >
-          <ListItem disablePadding>
-            <ListItemButton href="#">
-              <ListItemIcon
-                sx={{
-                  color: "primary.main",
-                  minWidth: "40px",
-                  ml: 8,
-                }}
-              >
-                <HomeIcon fontSize="large" />
-              </ListItemIcon>
-              <ListItemText
-                primary="Home"
-                primaryTypographyProps={{ variant: "h6" }}
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton href="#about">
-              <ListItemIcon
-                sx={{
-                  color: "primary.main",
-                  minWidth: "40px",
-                  ml: 8,
-                }}
-              >
-                <PersonIcon fontSize="large" />
-              </ListItemIcon>
-              <ListItemText
-                primary="About"
-                primaryTypographyProps={{ variant: "h6" }}
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton href="#projects">
-              <ListItemIcon
-                sx={{
-                  color: "primary.main",
-                  minWidth: "40px",
-                  ml: 8,
-                }}
-              >
-                <WebIcon fontSize="large" />
-              </ListItemIcon>
-              <ListItemText
-                primary="Projects"
-                primaryTypographyProps={{ variant: "h6" }}
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton href="#contact">
-              <ListItemIcon
-                sx={{
-                  color: "primary.main",
-                  minWidth: "40px",
-                  ml: 8,
-                }}
-              >
-                <EmailIcon fontSize="large" />
-              </ListItemIcon>
-              <ListItemText
-                primary="Contact"
-                primaryTypographyProps={{ variant: "h6" }}
-              />
-            </ListItemButton>
-          </ListItem>
-        </List>
         <Box
           sx={{
-            flexGrow: "1",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <Typography variant="h4">Felipe Ma</Typography>
+          <Typography variant="subtitle1">Software Developer</Typography>
+          <Stack direction={"column"} gap={1} py={7} alignItems={"start"}>
+            {sections.map((section) => (
+              <Button
+                href={section.link}
+                key={section.name}
+                sx={{
+                  fontSize: 18,
+                  color: "primary.main",
+                  "&:hover": {
+                    backgroundColor: alpha(theme.palette.primary.main, 0.3),
+                  },
+                }}
+              >
+                {section.name}
+              </Button>
+            ))}
+          </Stack>
+          <Stack direction="row" gap={2}>
+            {socials.map((social) => (
+              <IconButton
+                key={social.name}
+                href={social.link}
+                target="_blank"
+                color="primary"
+                sx={{
+                  backgroundColor: alpha(theme.palette.primary.main, 0.1),
+                  borderRadius: "50%",
+                  width: "42px",
+                  height: "42px",
+                  "&:hover": {
+                    backgroundColor: alpha(theme.palette.primary.main, 0.3),
+                  },
+                }}
+              >
+                {social.icon}
+              </IconButton>
+            ))}
+          </Stack>
+        </Box>
+        {/*<Box
+          sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-end",
@@ -217,7 +161,7 @@ export default function Header() {
           <Typography sx={{ textAlign: "center", pb: 2 }}>
             &copy; Copyright <b>Felipe Ma</b> - 2023
           </Typography>
-        </Box>
+        </Box>*/}
       </Container>
 
       <Fab

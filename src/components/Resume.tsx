@@ -7,12 +7,11 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import CircleIcon from "@mui/icons-material/Circle";
 import Box from "@mui/material/Box";
-import { text } from "stream/consumers";
 
 export default function Resume() {
   return (
     <Container
-      id="Resume"
+      id="experience"
       component={"section"}
       disableGutters
       sx={{

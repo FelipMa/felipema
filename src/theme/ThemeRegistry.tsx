@@ -31,9 +31,6 @@ const themeOptions: ThemeOptions = {
     primary: {
       main: "#f2a900",
     },
-    secondary: {
-      main: "#111111",
-    },
     text: {
       primary: "#fff",
     },

@@ -24,13 +24,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
       <Container
         disableGutters
         sx={{ paddingLeft: { xs: "0px", lg: "300px" }, margin: "0px" }}
         maxWidth={false}
         component={"main"}
       >
+        <Hero />
         <About />
         <Skills />
         <Resume />
