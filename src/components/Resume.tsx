@@ -10,16 +10,7 @@ import Box from "@mui/material/Box";
 
 export default function Resume() {
   return (
-    <Container
-      id="experience"
-      component={"section"}
-      disableGutters
-      sx={{
-        paddingX: { xs: "15px", sm: "30px" },
-        paddingTop: { xs: "40px", sm: "80px" },
-        maxWidth: { xs: "sm2", md2: "lg2" },
-      }}
-    >
+    <Box id="resume" component={"section"}>
       <Typography
         variant="h4"
         sx={{
@@ -39,7 +30,7 @@ export default function Resume() {
       </Typography>
 
       <Grid container spacing={2}>
-        <Grid item xs={12} sm2={6} data-aos="fade-up">
+        <Grid item xs={12} sm={6} data-aos="fade-up">
           <Typography
             variant="h5"
             sx={{
@@ -132,7 +123,7 @@ export default function Resume() {
             </Typography>
           </Container>
         </Grid>
-        <Grid item xs={12} sm2={6} data-aos="fade-up" data-aos-delay="100">
+        <Grid item xs={12} sm={6} data-aos="fade-up" data-aos-delay="100">
           <Typography
             variant="h5"
             sx={{
@@ -242,6 +233,6 @@ export default function Resume() {
           </Container>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }

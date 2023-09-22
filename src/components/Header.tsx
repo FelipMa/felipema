@@ -1,43 +1,16 @@
 import * as React from "react";
-import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import Fab from "@mui/material/Fab";
-import HomeIcon from "@mui/icons-material/Home";
-import PersonIcon from "@mui/icons-material/Person";
-import WebIcon from "@mui/icons-material/Web";
-import EmailIcon from "@mui/icons-material/Email";
 import Typography from "@mui/material/Typography";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import { useTheme } from "@mui/material/styles";
 import { Button, alpha } from "@mui/material";
 import Box from "@mui/material/Box";
 
 export default function Header() {
   const theme = useTheme();
-
-  const [headerPos, setHeaderPos] = React.useState<string>("-300px");
-  const [menuIcon, setMenuIcon] = React.useState<React.ReactNode>(<MenuIcon />);
-
-  const handleHeader = () => {
-    if (headerPos === "-300px") {
-      setHeaderPos("0px");
-      setMenuIcon(<CloseIcon />);
-    } else {
-      setHeaderPos("-300px");
-      setMenuIcon(<MenuIcon />);
-    }
-  };
 
   const socials = [
     {
@@ -59,47 +32,35 @@ export default function Header() {
 
   const sections = [
     {
-      name: "Home",
-      link: "#home",
-    },
-    {
       name: "About",
       link: "#about",
     },
     {
-      name: "Experience",
-      link: "#experience",
+      name: "Resume",
+      link: "#resume",
     },
     {
       name: "Projects",
       link: "#projects",
     },
-    {
-      name: "Contact",
-      link: "#contact",
-    },
   ];
 
   return (
     <>
-      <Container
-        disableGutters
+      <Box
         sx={{
-          position: "fixed",
+          position: { xs: "relative", md: "sticky" },
           top: "0px",
-          left: { xs: headerPos, lg: "0px" },
+          left: "0px",
           bottom: "0px",
-          width: "300px",
-          backgroundColor: "background.default",
-          transition: "all 0.5s",
+          height: { xs: "auto", md: "100vh" },
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "space-between",
           alignItems: "center",
-          zIndex: "100",
-          paddingLeft: "15px",
-          paddingRight: "15px",
+          paddingY: 10,
           color: "primary.main",
+          width: { xs: "100%", md: "30%" },
         }}
         component={"header"}
       >
@@ -110,8 +71,13 @@ export default function Header() {
             justifyContent: "center",
           }}
         >
-          <Typography variant="h4">Felipe Ma</Typography>
-          <Typography variant="subtitle1">Software Developer</Typography>
+          <Typography variant="h2" component={"h1"}>
+            Felipe Ma
+          </Typography>
+
+          <Typography variant="h4" component={"h2"} fontWeight={300}>
+            Software Developer
+          </Typography>
           <Stack direction={"column"} gap={1} py={7} alignItems={"start"}>
             {sections.map((section) => (
               <Button
@@ -129,28 +95,28 @@ export default function Header() {
               </Button>
             ))}
           </Stack>
-          <Stack direction="row" gap={2}>
-            {socials.map((social) => (
-              <IconButton
-                key={social.name}
-                href={social.link}
-                target="_blank"
-                color="primary"
-                sx={{
-                  backgroundColor: alpha(theme.palette.primary.main, 0.1),
-                  borderRadius: "50%",
-                  width: "42px",
-                  height: "42px",
-                  "&:hover": {
-                    backgroundColor: alpha(theme.palette.primary.main, 0.3),
-                  },
-                }}
-              >
-                {social.icon}
-              </IconButton>
-            ))}
-          </Stack>
         </Box>
+        <Stack direction="row" gap={2}>
+          {socials.map((social) => (
+            <IconButton
+              key={social.name}
+              href={social.link}
+              target="_blank"
+              color="primary"
+              sx={{
+                backgroundColor: alpha(theme.palette.primary.main, 0.1),
+                borderRadius: "50%",
+                width: "42px",
+                height: "42px",
+                "&:hover": {
+                  backgroundColor: alpha(theme.palette.primary.main, 0.3),
+                },
+              }}
+            >
+              {social.icon}
+            </IconButton>
+          ))}
+        </Stack>
         {/*<Box
           sx={{
             display: "flex",
@@ -162,22 +128,7 @@ export default function Header() {
             &copy; Copyright <b>Felipe Ma</b> - 2023
           </Typography>
         </Box>*/}
-      </Container>
-
-      <Fab
-        onClick={handleHeader}
-        size="small"
-        sx={{
-          bgcolor: "primary.main",
-          position: "fixed",
-          top: "15px",
-          right: { xs: "15px", lg: "-100px" },
-          transition: "all 0.5s",
-          zIndex: "100",
-        }}
-      >
-        {menuIcon}
-      </Fab>
+      </Box>
     </>
   );
 }

@@ -1,13 +1,13 @@
 "use client";
 
 import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 import Header from "@/components/Header";
 import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Resume from "@/components/Resume";
 import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
 import * as React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -23,19 +23,32 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Header />
       <Container
+        maxWidth="lg"
         disableGutters
-        sx={{ paddingLeft: { xs: "0px", lg: "300px" }, margin: "0px" }}
-        maxWidth={false}
-        component={"main"}
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          justifyContent: "space-between",
+          gap: 8,
+          paddingX: 6,
+        }}
       >
-        <Hero />
-        <About />
-        <Skills />
-        <Resume />
-        <Projects />
-        <Contact />
+        <Header />
+        <Box
+          component={"main"}
+          paddingY={10}
+          display={"flex"}
+          flexDirection={"column"}
+          gap={10}
+          width={{ xs: "100%", md: "70%" }}
+        >
+          {/*<Hero />*/}
+          <About />
+          <Skills />
+          <Resume />
+          <Projects />
+        </Box>
       </Container>
     </>
   );

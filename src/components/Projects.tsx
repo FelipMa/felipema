@@ -1,27 +1,25 @@
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
-import { alpha } from "@mui/material";
-import Button from "@mui/material/Button";
-import TabIcon from "@mui/icons-material/Tab";
-import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import Stack from "@mui/material/Stack";
+import BoltIcon from "@mui/icons-material/Bolt";
+
+const projects = [
+  {
+    name: "My site, felipema.com.br",
+    description: "This site was built with Next.js and Material UI",
+  },
+  {
+    name: "Algorithim for drone path planning and control",
+    description:
+      "This project was developed as part of my Cientific Initiation at UFBA, and implemented in C++ and Python, using ROS and Gazebo.",
+  },
+];
 
 export default function Projects() {
   const theme = useTheme();
   return (
-    <Container
-      id="projects"
-      component={"section"}
-      disableGutters
-      sx={{
-        paddingX: { xs: "15px", sm: "30px" },
-        paddingTop: { xs: "40px", sm: "80px" },
-        maxWidth: { xs: "sm2", md2: "lg2" },
-      }}
-    >
+    <Box id="projects" component={"section"}>
       <Typography
         variant="h4"
         sx={{
@@ -39,109 +37,26 @@ export default function Projects() {
       >
         Projects
       </Typography>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} sm2={4} data-aos="fade-up">
-          <Container
-            sx={{
-              textAlign: "center",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              border: "1px solid",
-              borderColor: "#fff",
-              boxShadow: "0px 10px 29px 0px rgba(68,88,144,0.1)",
-              padding: "30px",
-              textDecoration: "none",
-              color: "text.primary",
-              "&:hover": {
-                border: "1px solid red",
-                borderColor: "primary.main",
-                transition: "all 0.3s ease-in-out",
-              },
-              height: "350px",
-              justifyContent: "space-between",
-              gap: "10px",
-            }}
-          >
-            <Box
-              sx={{
-                backgroundColor: alpha(theme.palette.primary.main, 0.2),
-                borderRadius: "50%",
-                width: "72px",
-                height: "72px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+      <Stack direction={"column"} gap={4}>
+        {projects.map((project) => (
+          <Box display={"flex"} flexDirection={"row"} gap={6}>
+            <Box /*border={"1px solid"} borderColor={theme.palette.primary.main}*/
+              display={"flex"}
+              alignItems={"center"}
             >
-              <TabIcon color="primary" fontSize="large" />
+              <BoltIcon fontSize="large" />
             </Box>
-            <Typography variant="h5">My site, felipema.com.br</Typography>
-            <Typography variant="body1">
-              This site was built with Next.js and Material UI
-            </Typography>
-            <Button
-              variant="contained"
-              href="https://github.com/FelipMa"
-              target="_blank"
-            >
-              View the source code
-            </Button>
-          </Container>
-        </Grid>
-        <Grid item xs={12} sm={6} sm2={4} data-aos="fade-up">
-          <Container
-            sx={{
-              textAlign: "center",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              border: "1px solid",
-              borderColor: "#fff",
-              boxShadow: "0px 10px 29px 0px rgba(68,88,144,0.1)",
-              padding: "30px",
-              textDecoration: "none",
-              color: "text.primary",
-              "&:hover": {
-                border: "1px solid red",
-                borderColor: "primary.main",
-                transition: "all 0.3s ease-in-out",
-              },
-              height: "350px",
-              justifyContent: "space-between",
-              gap: "10px",
-            }}
-          >
-            <Box
-              sx={{
-                backgroundColor: alpha(theme.palette.primary.main, 0.2),
-                borderRadius: "50%",
-                width: "72px",
-                height: "72px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <FlightTakeoffIcon color="primary" fontSize="large" />
+
+            <Box display={"flex"} flexDirection={"column"} gap={1}>
+              <Typography variant={"h5"}>{project.name}</Typography>
+
+              <Typography variant={"subtitle1"}>
+                {project.description}
+              </Typography>
             </Box>
-            <Typography variant="h5">
-              Algorithim for drone path planning and control
-            </Typography>
-            <Typography variant="body1">
-              This project was developed as part of my Cientific Initiation at
-              UFBA, and implemented in C++ and Python, using ROS and Gazebo.
-            </Typography>
-            <Button
-              variant="contained"
-              href="https://github.com/FelipMa"
-              target="_blank"
-            >
-              View the source code
-            </Button>
-          </Container>
-        </Grid>
-      </Grid>
-    </Container>
+          </Box>
+        ))}
+      </Stack>
+    </Box>
   );
 }

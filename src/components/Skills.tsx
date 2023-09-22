@@ -1,21 +1,36 @@
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+
+const programmingLanguages = [
+  {
+    name: "Javascript",
+  },
+  {
+    name: "Typescript",
+  },
+  {
+    name: "SQL",
+  },
+  {
+    name: "Python",
+  },
+  {
+    name: "C",
+  },
+  {
+    name: "C++",
+  },
+  {
+    name: "Assembly",
+  },
+];
 
 export default function Skills() {
   return (
-    <Container
-      id="skills"
-      component={"section"}
-      disableGutters
-      sx={{
-        paddingX: { xs: "15px", sm: "30px" },
-        paddingTop: { xs: "40px", sm: "80px" },
-        maxWidth: { xs: "sm2", md2: "lg2" },
-      }}
-    >
+    <Box id="skills" component={"section"}>
       <Typography
         variant="h4"
         sx={{
@@ -38,106 +53,36 @@ export default function Skills() {
         sx={{ paddingBottom: "20px" }}
         data-aos="fade-up"
       >
-        Hard Skills:
+        Programming Languages:
       </Typography>
-      <Grid container spacing={{ xs: 2, sm2: 2 }}>
-        <Grid item xs={12} sm2={4} data-aos="fade-up">
-          <Box
+      <Grid container spacing={{ xs: 2, sm: 2 }}>
+        {programmingLanguages.map((language) => (
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            data-aos="fade-up"
             sx={{
               display: "flex",
-              justifyContent: "space-between",
+              alignItems: "center",
+              gap: 1,
+              paddingBottom: 1,
             }}
           >
-            <Typography>Javascript/Typescript</Typography>
-            <Typography>Advanced</Typography>
-          </Box>
-          <LinearProgress variant="determinate" value={90} />
-        </Grid>
+            <KeyboardArrowRightIcon color="primary" />
 
-        <Grid item xs={12} sm2={4} data-aos="fade-up">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography>Python</Typography>
-            <Typography>Good</Typography>
-          </Box>
-          <LinearProgress variant="determinate" value={60} />
-        </Grid>
-
-        <Grid item xs={12} sm2={4} data-aos="fade-up">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography>ROS/ROS2 (Robot Operating System)</Typography>
-            <Typography>Good</Typography>
-          </Box>
-          <LinearProgress variant="determinate" value={50} />
-        </Grid>
-
-        <Grid item xs={12} sm2={4} data-aos="fade-up">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography>Assembly and C for microcontrollers</Typography>
-            <Typography>Avarage</Typography>
-          </Box>
-          <LinearProgress variant="determinate" value={40} />
-        </Grid>
-
-        <Grid item xs={12} sm2={4} data-aos="fade-up">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography>Java</Typography>
-            <Typography>Just a few</Typography>
-          </Box>
-          <LinearProgress variant="determinate" value={20} />
-        </Grid>
-
-        <Grid item xs={12} sm2={4} data-aos="fade-up">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography>Git/Github</Typography>
-            <Typography>Advanced</Typography>
-          </Box>
-          <LinearProgress variant="determinate" value={95} />
-        </Grid>
-
-        <Grid item xs={12} sm2={4} data-aos="fade-up">
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography>AWS and similar</Typography>
-            <Typography>Used in some projects</Typography>
-          </Box>
-          <LinearProgress variant="determinate" value={45} />
-        </Grid>
+            <Typography component="span" variant="body1">
+              {language.name}
+            </Typography>
+          </Grid>
+        ))}
       </Grid>
 
       <Typography variant="h6" sx={{ paddingY: "20px" }} data-aos="fade-up">
         Soft Skills:
       </Typography>
-      <Grid container spacing={{ xs: 2, sm2: 2 }} data-aos="fade-up">
-        <Grid item xs={12} sm2={4} data-aos="fade-up">
+      <Grid container spacing={{ xs: 2, sm: 2 }} data-aos="fade-up">
+        <Grid item xs={12} sm={4} data-aos="fade-up">
           <Box
             sx={{
               display: "flex",
@@ -150,7 +95,7 @@ export default function Skills() {
           <LinearProgress variant="determinate" value={55} />
         </Grid>
 
-        <Grid item xs={12} sm2={4} data-aos="fade-up">
+        <Grid item xs={12} sm={4} data-aos="fade-up">
           <Box
             sx={{
               display: "flex",
@@ -163,7 +108,7 @@ export default function Skills() {
           <LinearProgress variant="determinate" value={90} />
         </Grid>
 
-        <Grid item xs={12} sm2={4} data-aos="fade-up">
+        <Grid item xs={12} sm={4} data-aos="fade-up">
           <Box
             sx={{
               display: "flex",
@@ -176,6 +121,6 @@ export default function Skills() {
           <LinearProgress variant="determinate" value={100} />
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }
