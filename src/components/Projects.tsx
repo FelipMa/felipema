@@ -69,7 +69,7 @@ export default function Projects() {
             <Box display={"flex"} flexDirection={"column"} gap={1}>
               <Typography variant={"h5"}>
                 {project.name}
-                <IconButton href={project.href}>
+                <IconButton href={project.href} target="_blank">
                   <OpenInNewIcon />
                 </IconButton>
               </Typography>
