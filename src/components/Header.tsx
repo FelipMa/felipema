@@ -57,8 +57,9 @@ export default function Header() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          alignItems: "center",
-          paddingY: 10,
+          alignItems: { xs: "flex-start", md: "center" },
+          paddingTop: 10,
+          paddingBottom: { xs: 0, md: 10 },
           color: "primary.main",
           width: { xs: "100%", md: "30%" },
         }}
@@ -75,10 +76,20 @@ export default function Header() {
             Felipe Ma
           </Typography>
 
-          <Typography variant="h4" component={"h2"} fontWeight={300}>
+          <Typography variant="h5" component={"h2"}>
             Software Developer
           </Typography>
-          <Stack direction={"column"} gap={1} py={7} alignItems={"start"}>
+
+          <Stack
+            direction={"column"}
+            gap={1}
+            py={7}
+            alignItems={"start"}
+            display={{
+              xs: "none",
+              md: "flex",
+            }}
+          >
             {sections.map((section) => (
               <Button
                 href={section.link}
@@ -96,7 +107,15 @@ export default function Header() {
             ))}
           </Stack>
         </Box>
-        <Stack direction="row" gap={2}>
+
+        <Stack
+          direction="row"
+          gap={2}
+          paddingTop={{
+            xs: 7,
+            md: 0,
+          }}
+        >
           {socials.map((social) => (
             <IconButton
               key={social.name}

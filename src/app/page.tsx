@@ -37,7 +37,8 @@ export default function Home() {
         <Header />
         <Box
           component={"main"}
-          paddingY={10}
+          paddingTop={{ xs: 0, md: 10 }}
+          paddingBottom={10}
           display={"flex"}
           flexDirection={"column"}
           gap={10}

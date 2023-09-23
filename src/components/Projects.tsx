@@ -39,11 +39,13 @@ export default function Projects() {
       </Typography>
       <Stack direction={"column"} gap={4}>
         {projects.map((project) => (
-          <Box display={"flex"} flexDirection={"row"} gap={6}>
-            <Box /*border={"1px solid"} borderColor={theme.palette.primary.main}*/
-              display={"flex"}
-              alignItems={"center"}
-            >
+          <Box
+            display={"flex"}
+            flexDirection={"row"}
+            gap={6}
+            key={project.name}
+          >
+            <Box display={"flex"} alignItems={"center"}>
               <BoltIcon fontSize="large" />
             </Box>
 

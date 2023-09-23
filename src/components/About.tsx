@@ -66,6 +66,7 @@ export default function About() {
                 gap: 1,
                 paddingBottom: 1,
               }}
+              key={info.title}
             >
               <KeyboardArrowRightIcon color="primary" />
 
