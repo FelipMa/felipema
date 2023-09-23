@@ -27,6 +27,11 @@ const information = [
   },
 ];
 
+const paragraphs = [
+  "I study computer engineering at the Federal University of Bahia, and enjoy studying anything related to technology, from web development to hardware interaction.",
+  "I'm currently focusing on web development and a bit of robotics, but I'm always open to new opportunities. I've made some projects for university and some personal projects, you can check them out on the projects section. I'm also very interested in low-level programming.",
+];
+
 export default function About() {
   React.useEffect(() => {
     AOS.init({
@@ -43,7 +48,6 @@ export default function About() {
         component={"h2"}
         sx={{
           fontWeight: "bold",
-          paddingBottom: "20px",
           "&:after": {
             content: "''",
             display: "block",
@@ -57,10 +61,10 @@ export default function About() {
         About
       </Typography>
 
-      <Box data-aos="fade-up">
-        <Typography component="h3" variant="h4" paddingBottom={1}>
-          Web developer &amp; low-level programming enthusiast
-        </Typography>
+      <Box data-aos="fade-up" paddingTop={2}>
+        {/*<Typography component="h3" variant="h4" paddingBottom={1}>
+          Software Developer
+        </Typography>*/}
 
         <Typography variant="h6" paddingBottom={1}>
           Some information about me:
@@ -95,32 +99,16 @@ export default function About() {
             gap: 1,
           }}
         >
-          <Typography component="p" variant="body1" textAlign={"justify"}>
-            I study computer engineering at the Federal University of Bahia, and
-            enjoy studying anything related to technology, from web development
-            to hardware interaction.
-          </Typography>
-
-          <Typography component="p" variant="body1" textAlign={"justify"}>
-            I&apos;m currently focusing on web development and a bit of
-            robotics, but I&apos;m always open to new opportunities. I have made
-            some projects for university and personal projects, you can check
-            them out on the projects section. I&apos;m also very interested in
-            low-level programming.
-          </Typography>
-
-          <Typography component="p" variant="body1" textAlign={"justify"}>
-            Good knowledge in web development, mainly in React/Next.js for front
-            end and Node.js express for back end. Also have experience with
-            Python and ROS/ROS2 (Robot Operating System), by developing some
-            projects in the university.
-          </Typography>
-
-          <Typography component="p" variant="body1" textAlign={"justify"}>
-            Currently I&apos;m development director at TITAN , Junior Enterprise
-            of Computer Engineering at UFBA. We develop custom software for
-            clients, mainly in web development.
-          </Typography>
+          {paragraphs.map((paragraph, index) => (
+            <Typography
+              component="p"
+              variant="body1"
+              textAlign={"justify"}
+              key={index}
+            >
+              {paragraph}
+            </Typography>
+          ))}
         </Box>
       </Box>
     </Box>

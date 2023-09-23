@@ -27,8 +27,8 @@ const professionalExperience = [
     ],
   },
   {
-    title: "Member",
-    date: "mar 2022 - Dec 2023",
+    title: "Developer",
+    date: "Mar 2022 - Dec 2023",
     place:
       "TITAN Computação Inteligente, Junior Enterprise of Computer Engineering at the Federal University of Bahia",
     content: [
@@ -61,7 +61,6 @@ export default function Resume() {
         variant="h4"
         sx={{
           fontWeight: "bold",
-          paddingBottom: "20px",
           "&:after": {
             content: "''",
             display: "block",
@@ -88,9 +87,8 @@ export default function Resume() {
       {professionalExperience.map((experience) => (
         <Box
           sx={{
-            paddingBottom: "20px",
-            paddingLeft: "20px",
-            marginTop: "-2px",
+            paddingBottom: 3,
+            paddingLeft: 3,
             borderLeft: "2px solid",
             borderColor: "primary.main",
             position: "relative",
@@ -101,7 +99,6 @@ export default function Resume() {
               height: "16px",
               borderRadius: "50px",
               left: "-9px",
-              top: "0",
               background: "#fff",
               border: "2px solid",
               borderColor: "primary.main",

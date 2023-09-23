@@ -20,7 +20,7 @@ const projects = [
   {
     name: "Algorithim for drone path planning and control",
     description:
-      "This project was developed as part of my Cientific Initiation at UFBA, and implemented in C++ and Python, using ROS and Gazebo. The goal was to develop and implement an algorithim for autonomous drone path planning and control.",
+      "This project was developed as part of my cientific initiation at UFBA. The goal was to develop and implement an algorithim for autonomous drone path planning and control. The algorithim was developed in Python, and the drone was controlled using ROS2. (no link to repository yet)",
     href: "",
   },
 ];
@@ -40,7 +40,6 @@ export default function Projects() {
         variant="h4"
         sx={{
           fontWeight: "bold",
-          paddingBottom: "20px",
           "&:after": {
             content: "''",
             display: "block",
@@ -53,22 +52,24 @@ export default function Projects() {
       >
         Projects
       </Typography>
-      <Stack direction={"column"} gap={4}>
+
+      <Stack direction={"column"} gap={4} paddingTop={2}>
         {projects.map((project) => (
           <Box
             display={"flex"}
             flexDirection={"row"}
-            gap={6}
+            gap={4}
             key={project.name}
             data-aos="fade-up"
           >
-            <Box display={"flex"} alignItems={"center"}>
+            <Box display={"flex"}>
               <BoltIcon fontSize="large" />
             </Box>
 
-            <Box display={"flex"} flexDirection={"column"} gap={1}>
+            <Box display={"flex"} flexDirection={"column"}>
               <Typography variant={"h5"}>
                 {project.name}
+
                 <IconButton href={project.href} target="_blank">
                   <OpenInNewIcon />
                 </IconButton>

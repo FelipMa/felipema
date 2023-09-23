@@ -10,9 +10,24 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { Button, alpha } from "@mui/material";
 import Box from "@mui/material/Box";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Header() {
+  React.useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
   const theme = useTheme();
+
+  const sectionTitle = {
+    title: "Felipe Ma",
+    subtitle: "Software Developer",
+  };
 
   const socials = [
     {
@@ -22,7 +37,7 @@ export default function Header() {
     },
     {
       name: "LinkedIn",
-      link: "https://www.linkedin.com/",
+      link: "https://www.linkedin.com/in/felipe-ma-0933a6274/",
       icon: <LinkedInIcon fontSize="large" />,
     },
     {
@@ -51,6 +66,10 @@ export default function Header() {
     },
   ];
 
+  function handleScrollToSection(section: string) {
+    document.querySelector(section)?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <>
       <Box
@@ -70,6 +89,7 @@ export default function Header() {
           width: { xs: "100%", md: "30%" },
         }}
         component={"header"}
+        data-aos="fade-right"
       >
         <Box
           sx={{
@@ -79,11 +99,11 @@ export default function Header() {
           }}
         >
           <Typography variant="h2" component={"h1"}>
-            Felipe Ma
+            {sectionTitle.title}
           </Typography>
 
           <Typography variant="h5" component={"h2"}>
-            Software Developer
+            {sectionTitle.subtitle}
           </Typography>
 
           <Stack
@@ -98,7 +118,7 @@ export default function Header() {
           >
             {sections.map((section) => (
               <Button
-                href={section.link}
+                onClick={() => handleScrollToSection(section.link)}
                 key={section.name}
                 sx={{
                   fontSize: 18,
