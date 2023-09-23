@@ -1,7 +1,6 @@
 "use client";
 
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -19,9 +18,21 @@ const professionalExperience = [
     place:
       "TITAN Computação Inteligente, Junior Enterprise of Computer Engineering at the Federal University of Bahia",
     content: [
-      "Experience in web development with React, Next.js, Node.js, Express.js, among others.",
-      "Experience in Project Management with Scrum and Notion",
-      "Expericence in business meetings and presentations",
+      "Web development with React, Next.js, Node.js, Express.js, among others.",
+      "Project management with Scrum and Notion",
+      "Business meetings and presentations",
+      "Team management and leadership",
+      "Software architecture",
+      "Scoping and planning projects",
+    ],
+  },
+  {
+    title: "Member",
+    date: "mar 2022 - Dec 2023",
+    place:
+      "TITAN Computação Inteligente, Junior Enterprise of Computer Engineering at the Federal University of Bahia",
+    content: [
+      "Focus on web development with React, Next.js, Node.js, Express.js, among others, in order to develop the skills needed to contribute to the development of the projects of the company.",
     ],
   },
 ];
