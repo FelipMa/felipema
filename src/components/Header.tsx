@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
@@ -36,6 +38,10 @@ export default function Header() {
       link: "#about",
     },
     {
+      name: "Skills",
+      link: "#skills",
+    },
+    {
       name: "Resume",
       link: "#resume",
     },
@@ -57,8 +63,8 @@ export default function Header() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          alignItems: { xs: "flex-start", md: "center" },
-          paddingTop: 10,
+          alignItems: "flex-start",
+          paddingTop: { xs: 4, md: 10 },
           paddingBottom: { xs: 0, md: 10 },
           color: "primary.main",
           width: { xs: "100%", md: "30%" },
@@ -112,7 +118,7 @@ export default function Header() {
           direction="row"
           gap={2}
           paddingTop={{
-            xs: 7,
+            xs: 4,
             md: 0,
           }}
         >

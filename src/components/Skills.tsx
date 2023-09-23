@@ -1,7 +1,12 @@
+"use client";
+
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import * as React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const skills = [
   {
@@ -26,9 +31,37 @@ const skills = [
     name: "Tools & Platforms",
     content: ["Git", "Github", "Vercel", "AWS", "Notion", "Figma"],
   },
+  {
+    name: "Soft Skills",
+    content: [
+      "Effective communication",
+      "Adaptability",
+      "Leadership",
+      "Continuous learning",
+      "Problem solving",
+    ],
+  },
+  {
+    name: "Other",
+    content: [
+      "Software Architecture",
+      "Product Management",
+      "Development Methods",
+      "Scrum",
+      "Design Process",
+    ],
+  },
 ];
 
 export default function Skills() {
+  React.useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
   return (
     <Box id="skills" component={"section"}>
       <Typography
@@ -49,7 +82,7 @@ export default function Skills() {
       </Typography>
 
       {skills.map((skill) => (
-        <>
+        <Box key={skill.name}>
           <Typography variant="h6" sx={{ paddingY: 2 }} data-aos="fade-up">
             {skill.name}
           </Typography>
@@ -58,13 +91,12 @@ export default function Skills() {
             {skill.content.map((item) => (
               <Grid
                 item
-                xs={6}
-                sm={3}
+                xs={12}
+                sm={4}
                 data-aos="fade-up"
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 1,
                   paddingBottom: 1,
                 }}
                 key={item}
@@ -77,7 +109,7 @@ export default function Skills() {
               </Grid>
             ))}
           </Grid>
-        </>
+        </Box>
       ))}
     </Box>
   );

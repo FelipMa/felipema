@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -7,8 +9,19 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import CircleIcon from "@mui/icons-material/Circle";
 import Box from "@mui/material/Box";
+import * as React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Resume() {
+  React.useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
   return (
     <Box id="resume" component={"section"}>
       <Typography
@@ -123,7 +136,7 @@ export default function Resume() {
             </Typography>
           </Container>
         </Grid>
-        <Grid item xs={12} sm={6} data-aos="fade-up" data-aos-delay="100">
+        <Grid item xs={12} sm={6} data-aos="fade-up">
           <Typography
             variant="h5"
             sx={{
