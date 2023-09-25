@@ -32,7 +32,7 @@ const professionalExperience = [
     place:
       "TITAN Computação Inteligente, Junior Enterprise of Computer Engineering at the Federal University of Bahia",
     content: [
-      "Focus on web development with React, Next.js, Node.js, Express.js, among others, in order to develop the skills needed to contribute to the development of the projects of the company.",
+      "Focus on web development with React, Next.js, Node.js, Express.js, among others.",
     ],
   },
 ];
