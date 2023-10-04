@@ -20,7 +20,7 @@ const projects = [
   {
     name: "Algorithim for drone path planning and control",
     description:
-      "This project was developed as part of my cientific initiation at UFBA. The goal was to develop and implement an algorithim for autonomous drone path planning and control. The algorithim was developed in Python, and the drone was controlled using ROS2. (no link to repository yet)",
+      "This project focuses on the implementation of movement algorithms in autonomous drones. The packages have been developed in Python and C++, using ROS2.",
     href: "",
   },
 ];
@@ -62,7 +62,7 @@ export default function Projects() {
             key={project.name}
             data-aos="fade-up"
           >
-            <Box display={"flex"}>
+            <Box display={"flex"} alignItems={"center"}>
               <BoltIcon fontSize="large" />
             </Box>
 

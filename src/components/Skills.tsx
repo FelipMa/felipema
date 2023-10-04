@@ -14,17 +14,25 @@ const skills = [
     content: [
       "Javascript",
       "Typescript",
-      "SQL",
       "Python",
       "C",
       "C++",
       "Assembly",
+      "SQL",
     ],
   },
 
   {
     name: "Libraries & Frameworks",
-    content: ["Express.js", "React", "Next.js", "Material UI", "ROS", "ROS 2"],
+    content: [
+      "Express.js",
+      "Prisma",
+      "React",
+      "Next.js",
+      "Material UI",
+      "ROS",
+      "ROS 2",
+    ],
   },
 
   {
@@ -34,20 +42,19 @@ const skills = [
   {
     name: "Soft Skills",
     content: [
-      "Effective communication",
-      "Adaptability",
-      "Leadership",
-      "Continuous learning",
       "Problem solving",
+      "Adaptability",
+      "Continuous learning",
+      "Effective communication",
+      "Leadership",
     ],
   },
   {
     name: "Other",
     content: [
+      "Scrum",
       "Software Architecture",
       "Product Management",
-      "Development Methods",
-      "Scrum",
       "Design Process",
     ],
   },
@@ -97,7 +104,7 @@ export default function Skills() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  paddingBottom: 1,
+                  paddingBottom: "4px",
                 }}
                 key={item}
               >

@@ -7,6 +7,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import CircleIcon from "@mui/icons-material/Circle";
 import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import * as React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,12 +20,12 @@ const professionalExperience = [
     place:
       "TITAN Computação Inteligente, Junior Enterprise of Computer Engineering at the Federal University of Bahia",
     content: [
-      "Web development with React, Next.js, Node.js, Express.js, among others.",
-      "Project management with Scrum and Notion",
+      "Web development with Node.js, Express.js, Prisma, Next.js and similar.",
+      "API design",
+      "Database modeling",
+      "Product management with Scrum and Notion",
       "Business meetings and presentations",
       "Team management and leadership",
-      "Software architecture",
-      "Scoping and planning projects",
     ],
   },
   {
@@ -32,7 +34,7 @@ const professionalExperience = [
     place:
       "TITAN Computação Inteligente, Junior Enterprise of Computer Engineering at the Federal University of Bahia",
     content: [
-      "Focus on web development with React, Next.js, Node.js, Express.js, among others.",
+      "Web development with Node.js, Express.js, Prisma, Next.js and similar.",
     ],
   },
 ];
@@ -71,7 +73,13 @@ export default function Resume() {
           },
         }}
       >
-        Resume
+        Resume{" "}
+        <IconButton
+          href={"/documents/Resumee_FelipeMa_Dev.pdf"}
+          target="_blank"
+        >
+          <OpenInNewIcon />
+        </IconButton>
       </Typography>
 
       <Typography
