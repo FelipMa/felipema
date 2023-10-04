@@ -57,11 +57,12 @@ export default function About() {
             marginTop: "10px",
           },
         }}
+        data-aos="fade-up"
       >
         About
       </Typography>
 
-      <Box data-aos="fade-up" paddingTop={2}>
+      <Box paddingTop={2} data-aos="fade-up">
         {/*<Typography component="h3" variant="h4" paddingBottom={1}>
           Software Developer
         </Typography>*/}

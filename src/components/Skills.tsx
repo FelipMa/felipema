@@ -84,13 +84,14 @@ export default function Skills() {
             marginTop: "10px",
           },
         }}
+        data-aos="fade-up"
       >
         Skills
       </Typography>
 
       {skills.map((skill) => (
-        <Box key={skill.name}>
-          <Typography variant="h6" sx={{ paddingY: 2 }} data-aos="fade-up">
+        <Box key={skill.name} data-aos="fade-up">
+          <Typography variant="h6" sx={{ paddingY: 2 }}>
             {skill.name}
           </Typography>
 
@@ -100,7 +101,6 @@ export default function Skills() {
                 item
                 xs={12}
                 sm={4}
-                data-aos="fade-up"
                 sx={{
                   display: "flex",
                   alignItems: "center",

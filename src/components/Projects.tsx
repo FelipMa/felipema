@@ -35,7 +35,7 @@ export default function Projects() {
     });
   }, []);
   return (
-    <Box id="projects" component={"section"}>
+    <Box id="projects" component={"section"} data-aos="fade-up">
       <Typography
         variant="h4"
         sx={{

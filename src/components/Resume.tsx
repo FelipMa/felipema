@@ -58,7 +58,7 @@ export default function Resume() {
     });
   }, []);
   return (
-    <Box id="resume" component={"section"}>
+    <Box id="resume" component={"section"} data-aos="fade-up">
       <Typography
         variant="h4"
         sx={{
