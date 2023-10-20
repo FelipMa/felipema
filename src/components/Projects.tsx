@@ -12,10 +12,16 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const projects = [
   {
-    name: "My site, felipema.vercel.app",
+    name: "felipema.vercel.app",
     description:
       "This site was built with Next.js and Material UI (soon I'll buy a domain)",
     href: "https://github.com/FelipMa/felipema",
+  },
+  {
+    name: "tt-scheduling-app",
+    description:
+      "The purpose of this project is to create a simple tweet scheduler that can be used to schedule tweets.",
+    href: "https://github.com/FelipMa/tt-scheduling-app",
   },
   {
     name: "Algorithim for drone path planning and control",
