@@ -12,7 +12,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const projects = [
   {
-    name: "felipema.vercel.app",
+    name: "felipema",
     description:
       "This site was built with Next.js and Material UI (soon I'll buy a domain)",
     href: "https://github.com/FelipMa/felipema",
@@ -24,15 +24,15 @@ const projects = [
     href: "https://github.com/FelipMa/tt-scheduling-app",
   },
   {
-    name: "Algorithim for drone path planning and control",
+    name: "tello_ros2_packages",
     description:
       "This project focuses on the implementation of movement algorithms in autonomous drones. The packages have been developed in Python and C++, using ROS2. (no public repo yet)",
     href: "",
   },
   {
-    name: "Next.js Blog API",
+    name: "nextjs-blog-api",
     description:
-      "This project is a blog API built with Next.js, Prisma and PostgreSQL. (no public repo yet)",
+      "This project is a blog API built with Next.js, Prisma and PostgreSQL, using Next.js serverless functions. (no public repo yet)",
     href: "",
   },
 ];
@@ -62,17 +62,16 @@ export default function Projects() {
           },
         }}
       >
-        Projects
+        Personal Projects
       </Typography>
 
-      <Stack direction={"column"} gap={4} paddingTop={2}>
+      <Stack direction={"column"} gap={4} paddingTop={2} data-aos="fade-up">
         {projects.map((project) => (
           <Box
             display={"flex"}
             flexDirection={"row"}
             gap={4}
             key={project.name}
-            data-aos="fade-up"
           >
             <Box display={"flex"} alignItems={"center"}>
               <BoltIcon fontSize="large" />
