@@ -77,6 +77,7 @@ export default function Resume() {
         <IconButton
           href={"/documents/Resumee_FelipeMa_Dev.pdf"}
           target="_blank"
+          title="Full Resume"
         >
           <OpenInNewIcon />
         </IconButton>

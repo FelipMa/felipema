@@ -81,7 +81,11 @@ export default function Projects() {
               <Typography variant={"h5"}>
                 {project.name}
 
-                <IconButton href={project.href} target="_blank">
+                <IconButton
+                  href={project.href}
+                  target="_blank"
+                  title="View code"
+                >
                   <OpenInNewIcon />
                 </IconButton>
               </Typography>

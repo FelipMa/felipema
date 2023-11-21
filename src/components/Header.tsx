@@ -146,6 +146,7 @@ export default function Header() {
             <IconButton
               key={social.name}
               href={social.link}
+              title={social.name}
               target="_blank"
               color="primary"
               sx={{
