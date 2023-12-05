@@ -26,8 +26,8 @@ const projects = [
   {
     name: "tello_ros2_packages",
     description:
-      "This project focuses on the implementation of movement algorithms in autonomous drones. The packages have been developed in Python and C++, using ROS2. (no public repo yet)",
-    href: "",
+      "This project focuses on the implementation of control algorithms in autonomous drones. The packages have been developed in Python and C++, using ROS2",
+    href: "https://github.com/FelipMa/tello_ros2_packages",
   },
   {
     name: "nextjs-blog-api",
