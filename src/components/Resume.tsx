@@ -44,7 +44,9 @@ const education = [
     title: "Bachelor's Degree in Computer Engineering",
     date: "2021 - Present",
     place: "Federal University of Bahia, Salvador, BA, Brazil",
-    content: ["Cientific Initiation Scholarship - Robotics and Drone Control"],
+    content: [
+      "Cientific Initiation Scholarship - Robotics and Drone Control with ROS/ROS2",
+    ],
   },
 ];
 

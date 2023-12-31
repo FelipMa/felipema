@@ -29,8 +29,8 @@ const information = [
 
 const paragraphs = [
   "I study computer engineering at the Federal University of Bahia, and enjoy studying anything related to technology, from web development to hardware interaction.",
-  "I am currently dedicated to web development and robotics, but I'm always open to explore new opportunities. Additionally, I am also very interested in low-level programming.",
-  "My background includes hands-on experience in web development through my involvement on the junior enterprise I'm part of, as well as knowledge in robotics gained from my scientific initiation.",
+  "I am currently dedicated to web development and robotics, but I'm always open to explore new opportunities. Additionally, I am also very interested in low-level programming, especially in Rust.",
+  "My background includes hands-on experience with web development through the junior enterprise I'm part of, as well as robotics knowledge gained from my scientific initiation.",
 ];
 
 export default function About() {
@@ -64,10 +64,6 @@ export default function About() {
       </Typography>
 
       <Box paddingTop={2} data-aos="fade-up">
-        {/*<Typography component="h3" variant="h4" paddingBottom={1}>
-          Software Developer
-        </Typography>*/}
-
         <Typography variant="h6" paddingBottom={1}>
           Some information about me:
         </Typography>

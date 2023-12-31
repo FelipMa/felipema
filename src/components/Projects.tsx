@@ -12,9 +12,8 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const projects = [
   {
-    name: "felipema",
-    description:
-      "This site was built with Next.js and Material UI (soon I'll buy a domain)",
+    name: "felipema.dev.br",
+    description: "This site was built with Next.js and Material UI",
     href: "https://github.com/FelipMa/felipema",
   },
   {

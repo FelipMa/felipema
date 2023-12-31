@@ -11,28 +11,12 @@ import "aos/dist/aos.css";
 const skills = [
   {
     name: "Programming Languages",
-    content: [
-      "Javascript",
-      "Typescript",
-      "Python",
-      "C",
-      "C++",
-      "Assembly",
-      "SQL",
-    ],
+    content: ["Rust", "C", "C++", "Javascript", "Typescript", "Python", "SQL"],
   },
 
   {
     name: "Libraries & Frameworks",
-    content: [
-      "Express.js",
-      "Prisma",
-      "React",
-      "Next.js",
-      "Material UI",
-      "ROS",
-      "ROS 2",
-    ],
+    content: ["ROS/ROS2", "Axum", "Express.js", "Prisma", "React", "Next.js"],
   },
 
   {
@@ -51,12 +35,7 @@ const skills = [
   },
   {
     name: "Other",
-    content: [
-      "Scrum",
-      "Software Architecture",
-      "Product Management",
-      "Design Process",
-    ],
+    content: ["Scrum", "Software Architecture"],
   },
 ];
 
