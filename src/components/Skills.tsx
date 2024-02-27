@@ -16,12 +16,12 @@ const skills = [
 
   {
     name: "Libraries & Frameworks",
-    content: ["ROS/ROS2", "Axum", "Express.js", "Prisma", "React", "Next.js"],
+    content: ["ROS/ROS2", "Axum", "Express.js", "NestJS", "React", "Next.js"],
   },
 
   {
     name: "Tools & Platforms",
-    content: ["Git", "Github", "Vercel", "AWS", "Notion", "Figma"],
+    content: ["Git", "Github", "Vercel", "AWS", "Notion", "Figma", "Jira"],
   },
   {
     name: "Soft Skills",

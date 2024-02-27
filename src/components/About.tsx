@@ -29,8 +29,8 @@ const information = [
 
 const paragraphs = [
   "I study computer engineering at the Federal University of Bahia, and enjoy studying anything related to technology, from web development to hardware interaction.",
-  "I am currently dedicated to web development and robotics, but I'm always open to explore new opportunities. Additionally, I am also very interested in low-level programming, especially in Rust.",
-  "My background includes hands-on experience with web development through the junior enterprise I'm part of, as well as robotics knowledge gained from my scientific initiation.",
+  "I currently work as a software developer and have experience in Node.js frameworks. Additionally, I also have knowledge and a lot of interest in areas that involve low-level programming with C, C++ or Rust, such as robotics, microcontrollers and operating systems.",
+  "My background includes hands-on experience with web development, some personal projects and robotics knowledge gained from my scientific initiation.",
 ];
 
 export default function About() {

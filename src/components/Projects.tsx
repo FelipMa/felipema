@@ -12,15 +12,15 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const projects = [
   {
+    name: "family-tree-api",
+    description:
+      "This project is a simple API to manage a family tree. It was built with Rust, Axum and SQLx.",
+    href: "https://github.com/FelipMa/family-tree-api",
+  },
+  {
     name: "felipema.dev.br",
     description: "This site was built with Next.js and Material UI",
     href: "https://github.com/FelipMa/felipema",
-  },
-  {
-    name: "tt-scheduling-app",
-    description:
-      "The purpose of this project is to create a simple tweet scheduler that can be used to schedule tweets.",
-    href: "https://github.com/FelipMa/tt-scheduling-app",
   },
   {
     name: "tello_ros2_packages",
@@ -29,10 +29,10 @@ const projects = [
     href: "https://github.com/FelipMa/tello_ros2_packages",
   },
   {
-    name: "nextjs-blog-api",
+    name: "tt-scheduling-app",
     description:
-      "This project is a blog API built with Next.js, Prisma and PostgreSQL, using Next.js serverless functions. (no public repo yet)",
-    href: "",
+      "The purpose of this project is to create a simple tweet scheduler that can be used to schedule tweets.",
+    href: "https://github.com/FelipMa/tt-scheduling-app",
   },
 ];
 
