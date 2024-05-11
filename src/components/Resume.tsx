@@ -18,7 +18,10 @@ const professionalExperience = [
     title: "Software Developer Intern",
     date: "Feb 2024 - Present",
     place: "Avantsoft",
-    content: ["Back-end development with NestJS and similar."],
+    content: [
+      "Back-end development with NestJS and Ruby on Rails.",
+      " Experience with API development, integration with third-party APIs and cloud computing services.",
+    ],
   },
   {
     title: "Development Director",
