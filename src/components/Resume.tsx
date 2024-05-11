@@ -96,7 +96,7 @@ export default function Resume() {
       >
         Resume{" "}
         <IconButton
-          href={"/documents/Resume-FelipeMa-Dev.pdf"}
+          href={"/documents/Resume-FelipeMa.pdf"}
           target="_blank"
           title="Full Resume"
         >
