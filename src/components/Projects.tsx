@@ -9,8 +9,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import IconButton from "@mui/material/IconButton";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import Button from "@mui/material/Button";
 
 const projects = [
+  {
+    name: "Dre Metrics",
+    description:
+      "It is a project I participated as project owner and developer during my time at TITAN. It is an mobile application that helps you to track your company revenue and expenses. It was built with Flutter for frontend and Express.js for backend.",
+    href: "https://dremetrics.com.br/",
+  },
   {
     name: "family-tree-api",
     description:
@@ -18,15 +25,16 @@ const projects = [
     href: "https://github.com/FelipMa/family-tree-api",
   },
   {
-    name: "felipema.dev.br",
-    description: "This site was built with Next.js and Material UI",
-    href: "https://github.com/FelipMa/felipema",
-  },
-  {
     name: "tello_ros2_packages",
     description:
-      "This project focuses on the implementation of control algorithms in autonomous drones. The packages have been developed in Python and C++, using ROS2",
+      "This project focuses on the implementation of control algorithms in autonomous drones. The packages have been developed in Python and C++, using ROS2.",
     href: "https://github.com/FelipMa/tello_ros2_packages",
+  },
+  {
+    name: "pipe-cleaning-robot",
+    description:
+      "This project is a simulation of a pipe cleaning robot, part of a college work. It was made with verilog hdl and tested with modelsim.",
+    href: "https://github.com/FelipMa/pipe-cleaning-robot",
   },
   {
     name: "tt-scheduling-app",
@@ -34,9 +42,27 @@ const projects = [
       "The purpose of this project is to create a simple tweet scheduler that can be used to schedule tweets.",
     href: "https://github.com/FelipMa/tt-scheduling-app",
   },
+  {
+    name: "snake_game",
+    description: "A terminal-based snake game built with Rust.",
+    href: "https://github.com/FelipMa/snake_game",
+  },
+  {
+    name: "felipema.dev.br",
+    description: "This site was built with Next.js and Material UI.",
+    href: "https://github.com/FelipMa/felipema",
+  },
 ];
 
 export default function Projects() {
+  const [projectsNumber, setProjectsNumber] = React.useState(4);
+
+  const handleShowMoreProjects = () => {
+    if (projectsNumber < projects.length) {
+      setProjectsNumber(projectsNumber + 4);
+    }
+  };
+
   React.useEffect(() => {
     AOS.init({
       duration: 800,
@@ -61,21 +87,28 @@ export default function Projects() {
           },
         }}
       >
-        Personal Projects
+        Projects
       </Typography>
 
       <Stack direction={"column"} gap={4} paddingTop={2} data-aos="fade-up">
-        {projects.map((project) => (
+        {projects.slice(0, projectsNumber).map((project) => (
           <Box
             display={"flex"}
             flexDirection={"row"}
-            gap={4}
             key={project.name}
+            sx={{
+              "&:before": {
+                flex: "0 0 auto",
+                content: "''",
+                display: "inline-block",
+                width: "3px",
+                height: "40px",
+                backgroundColor: "primary.main",
+                marginRight: "16px",
+                marginTop: "8px",
+              },
+            }}
           >
-            <Box display={"flex"} alignItems={"center"}>
-              <BoltIcon fontSize="large" />
-            </Box>
-
             <Box display={"flex"} flexDirection={"column"}>
               <Typography variant={"h5"}>
                 {project.name}
@@ -95,6 +128,20 @@ export default function Projects() {
             </Box>
           </Box>
         ))}
+        <Button
+          variant="outlined"
+          onClick={
+            projectsNumber < projects.length
+              ? handleShowMoreProjects
+              : undefined
+          }
+          disabled={projectsNumber >= projects.length}
+          sx={{
+            maxWidth: "160px",
+          }}
+        >
+          {projectsNumber < projects.length ? "Show more" : "No more projects"}
+        </Button>
       </Stack>
     </Box>
   );

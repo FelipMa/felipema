@@ -19,8 +19,8 @@ const professionalExperience = [
     date: "Feb 2024 - Present",
     place: "Avantsoft",
     content: [
-      "Back-end development with NestJS and Ruby on Rails.",
-      " Experience with API development, integration with third-party APIs and cloud computing services.",
+      "Back-end development with NestJS",
+      "Experience with API development, integration with third-party APIs and cloud computing services.",
     ],
   },
   {
@@ -60,7 +60,7 @@ const education = [
 const sientificResearch = [
   {
     title: "Scientific Initiation",
-    date: "Aug 2022 - Mar present",
+    date: "Aug 2022 - Aug 2024",
     place: "Federal University of Bahia, Salvador, BA, Brazil",
     content: [
       "Cientific Initiation Scholarship - Robotics and Drone Control with ROS/ROS2",
