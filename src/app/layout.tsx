@@ -1,11 +1,11 @@
-import ThemeRegistry from "@/theme/ThemeRegistry";
-import { Inter } from "next/font/google";
+import ThemeRegistry from '@/theme/ThemeRegistry';
+import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Felipe Ma",
-  description: "Made with Next.js + MUI",
+  title: 'Felipe Ma',
+  description: 'Made with Next.js + MUI',
 };
 
 export default function RootLayout({

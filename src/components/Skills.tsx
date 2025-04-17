@@ -1,59 +1,50 @@
-"use client";
+'use client';
 
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import * as React from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import * as React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const skills = [
   {
-    name: "Programming Languages",
+    name: 'Programming Languages',
+    content: ['Rust', 'C', 'C++', 'Javascript/Typescript', 'Python', 'SQL'],
+  },
+
+  {
+    name: 'Libraries & Frameworks',
     content: [
-      "Rust",
-      "C",
-      "C++",
-      "Javascript/Typescript",
-      "Python",
-      "SQL",
-      "Ruby",
+      'Axum',
+      'Sqlx',
+      'Express.js',
+      'NestJS',
+      'ROS/ROS2',
+      'Prisma ORM',
+      'React',
+      'Next.js',
     ],
   },
 
   {
-    name: "Libraries & Frameworks",
-    content: [
-      "Axum",
-      "Sqlx",
-      "Express.js",
-      "NestJS",
-      "ROS/ROS2",
-      "Prisma ORM",
-      "React",
-      "Next.js",
-      "Ruby on Rails",
-    ],
-  },
-
-  {
-    name: "Tools & Platforms",
-    content: ["Git", "Github", "Vercel", "AWS", "Notion", "Figma", "Jira"],
+    name: 'Tools & Platforms',
+    content: ['Git', 'Github', 'Vercel', 'AWS', 'Notion', 'Figma', 'Jira'],
   },
   {
-    name: "Soft Skills",
+    name: 'Soft Skills',
     content: [
-      "Problem solving",
-      "Adaptability",
-      "Continuous learning",
-      "Effective communication",
-      "Leadership",
+      'Problem solving',
+      'Adaptability',
+      'Continuous learning',
+      'Effective communication',
+      'Leadership',
     ],
   },
   {
-    name: "Other",
-    content: ["Scrum", "Software Architecture"],
+    name: 'Other',
+    content: ['Scrum', 'Software Architecture'],
   },
 ];
 
@@ -61,24 +52,24 @@ export default function Skills() {
   React.useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       once: true,
       mirror: false,
     });
   }, []);
   return (
-    <Box id="skills" component={"section"}>
+    <Box id="skills" component={'section'}>
       <Typography
         variant="h4"
         sx={{
-          fontWeight: "bold",
-          "&:after": {
+          fontWeight: 'bold',
+          '&:after': {
             content: "''",
-            display: "block",
-            width: "50px",
-            height: "3px",
-            backgroundColor: "primary.main",
-            marginTop: "10px",
+            display: 'block',
+            width: '50px',
+            height: '3px',
+            backgroundColor: 'primary.main',
+            marginTop: '10px',
           },
         }}
         data-aos="fade-up"
@@ -99,9 +90,9 @@ export default function Skills() {
                 xs={12}
                 sm={4}
                 sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  paddingBottom: "4px",
+                  display: 'flex',
+                  alignItems: 'center',
+                  paddingBottom: '4px',
                 }}
                 key={item}
               >

@@ -1,61 +1,61 @@
-"use client";
+'use client';
 
-import Typography from "@mui/material/Typography";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import * as React from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import Typography from '@mui/material/Typography';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import * as React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const information = [
   {
-    title: "Birthday",
-    content: "21 Mar 2003",
+    title: 'Birthday',
+    content: '21 Mar 2003',
   },
   {
-    title: "City",
-    content: "Salvador, BA, Brazil",
+    title: 'City',
+    content: 'Salvador, BA, Brazil',
   },
   {
-    title: "Degree",
-    content: "(Almost) Computer Engineer",
+    title: 'Degree',
+    content: '(Almost) Computer Engineer',
   },
   {
-    title: "Email",
-    content: "felipeapenburg@gmail.com",
+    title: 'Email',
+    content: 'felipeapenburg@gmail.com',
   },
 ];
 
 const paragraphs = [
-  "I study computer engineering at the Federal University of Bahia, and enjoy studying anything related to technology, from web development to hardware interaction.",
-  "I currently work as a software developer and have experience in Node.js frameworks. Additionally, I also have knowledge and a lot of interest in areas that involve low-level programming with C, C++ or Rust, such as robotics, microcontrollers and operating systems.",
-  "My background includes hands-on experience with web development, some personal projects and robotics knowledge gained from my scientific initiation.",
+  'I study computer engineering at the Federal University of Bahia, and enjoy studying anything related to technology, from web development to hardware interaction.',
+  'I currently work as a software developer and have experience in Node.js frameworks. Additionally, I also have knowledge and a lot of interest in areas that involve low-level programming with C, C++ or Rust, such as robotics, microcontrollers and operating systems.',
+  'My background includes hands-on experience with web development, some personal projects and robotics knowledge gained from my scientific initiation.',
 ];
 
 export default function About() {
   React.useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       once: true,
       mirror: false,
     });
   }, []);
   return (
-    <Box id="about" component={"section"}>
+    <Box id="about" component={'section'}>
       <Typography
         variant="h4"
-        component={"h2"}
+        component={'h2'}
         sx={{
-          fontWeight: "bold",
-          "&:after": {
+          fontWeight: 'bold',
+          '&:after': {
             content: "''",
-            display: "block",
-            width: "50px",
-            height: "3px",
-            backgroundColor: "primary.main",
-            marginTop: "10px",
+            display: 'block',
+            width: '50px',
+            height: '3px',
+            backgroundColor: 'primary.main',
+            marginTop: '10px',
           },
         }}
         data-aos="fade-up"
@@ -75,8 +75,8 @@ export default function About() {
               xs={12}
               sm={6}
               sx={{
-                display: "flex",
-                alignItems: "center",
+                display: 'flex',
+                alignItems: 'center',
                 gap: { xs: 0, sm: 1 },
                 paddingBottom: 1,
               }}
@@ -92,8 +92,8 @@ export default function About() {
         </Grid>
         <Box
           sx={{
-            display: "flex",
-            flexDirection: "column",
+            display: 'flex',
+            flexDirection: 'column',
             gap: 1,
           }}
         >
@@ -101,7 +101,7 @@ export default function About() {
             <Typography
               component="p"
               variant="body1"
-              textAlign={"justify"}
+              textAlign={'justify'}
               key={index}
             >
               {paragraph}
