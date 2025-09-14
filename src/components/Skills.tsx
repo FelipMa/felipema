@@ -86,9 +86,7 @@ export default function Skills() {
           <Grid container spacing={{ xs: 1 }}>
             {skill.content.map((item) => (
               <Grid
-                item
-                xs={12}
-                sm={4}
+                size={{ xs: 12, sm: 4 }}
                 sx={{
                   display: 'flex',
                   alignItems: 'center',

@@ -1,7 +1,12 @@
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import ThemeRegistry from '@/theme/ThemeRegistry';
-import { Inter } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: 'Felipe Ma',
@@ -15,9 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ThemeRegistry>
-        <body className={inter.className}>{children}</body>
-      </ThemeRegistry>
+      <body className={roboto.className}>
+        <AppRouterCacheProvider>
+          <ThemeRegistry>{children}</ThemeRegistry>
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }

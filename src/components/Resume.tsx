@@ -117,7 +117,7 @@ export default function Resume() {
         Professional Experience
       </Typography>
 
-      {professionalExperience.map((experience) => (
+      {professionalExperience.map((experience, idx) => (
         <Box
           sx={{
             paddingBottom: 3,
@@ -137,7 +137,7 @@ export default function Resume() {
               borderColor: 'primary.main',
             },
           }}
-          key={experience.title}
+          key={idx}
         >
           <Typography variant="h6">{experience.title}</Typography>
 

@@ -71,9 +71,7 @@ export default function About() {
         <Grid container spacing={0} paddingBottom={1}>
           {information.map((info) => (
             <Grid
-              item
-              xs={12}
-              sm={6}
+              size={{ xs: 12, sm: 6 }}
               sx={{
                 display: 'flex',
                 alignItems: 'center',
