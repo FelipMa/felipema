@@ -11,26 +11,26 @@ import 'aos/dist/aos.css';
 const skills = [
   {
     name: 'Programming Languages',
-    content: ['Rust', 'C', 'C++', 'Javascript/Typescript', 'Python', 'SQL'],
+    content: ['Javascript/Typescript', 'Rust', 'C', 'C++', 'Python', 'SQL'],
   },
 
   {
     name: 'Libraries & Frameworks',
     content: [
+      'NestJS',
+      'Express.js',
+      'Prisma ORM',
       'Axum',
       'Sqlx',
-      'Express.js',
-      'NestJS',
-      'ROS/ROS2',
-      'Prisma ORM',
       'React',
       'Next.js',
+      'ROS/ROS2',
     ],
   },
 
   {
     name: 'Tools & Platforms',
-    content: ['Git', 'Github', 'Vercel', 'AWS', 'Notion', 'Figma', 'Jira'],
+    content: ['AWS', 'Git', 'Github', 'Vercel', 'Jira', 'Notion'],
   },
   {
     name: 'Soft Skills',

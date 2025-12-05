@@ -28,9 +28,8 @@ const information = [
 ];
 
 const paragraphs = [
-  'I study computer engineering at the Federal University of Bahia, and enjoy studying anything related to technology, from web development to hardware interaction.',
-  'I currently work as a software developer and have experience in Node.js frameworks. Additionally, I also have knowledge and a lot of interest in areas that involve low-level programming with C, C++ or Rust, such as robotics, microcontrollers and operating systems.',
-  'My background includes hands-on experience with web development, some personal projects and robotics knowledge gained from my scientific initiation.',
+  'I am a computer engineering student at the Federal University of Bahia (UFBA) with professional experience as a Software Developer. My core expertise lies in backend development, specifically utilizing Node.js frameworks and cloud technologies to build scalable solutions.',
+  'Beyond web development, I possess a deep technical interest in the hardware-software interface. I am actively expanding my proficiency in low-level programming, operating systems, and embedded systems, with a special attention on the Rust programming language and its application in performance-critical environments.',
 ];
 
 export default function About() {
