@@ -1,0 +1,89 @@
+:root {
+  --bg: #0b0a09;
+  --bg-vignette: #16130f;
+  --accent: #f2a900;
+  --accent-dim: rgba(242, 169, 0, 0.55);
+  --accent-hairline: rgba(242, 169, 0, 0.22);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 42%,
+    var(--bg-vignette) 0%,
+    var(--bg) 65%
+  );
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: clamp(2.7rem, 8.5vw, 6.2rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: rise 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.rule {
+  width: 44px;
+  height: 1px;
+  background: var(--accent-hairline);
+  margin: 1.7rem auto;
+  transform: scaleX(0);
+  animation: draw 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.5s forwards;
+}
+
+p {
+  font-weight: 500;
+  font-size: clamp(0.8rem, 1.7vw, 0.95rem);
+  letter-spacing: -0.005em;
+  color: var(--accent-dim);
+  opacity: 0;
+  animation: rise 1s cubic-bezier(0.16, 1, 0.3, 1) 0.75s forwards;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes draw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1,
+  p,
+  .rule {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
